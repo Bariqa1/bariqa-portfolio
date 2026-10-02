@@ -1366,6 +1366,13 @@ button {
   display: inline-flex;
 }
 
+html[dir="rtl"] [data-i18n="attocus-num2"],
+html[dir="rtl"] [data-i18n="attocus-num3"],
+html[dir="rtl"] [data-i18n="uniclubs-num2"] {
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+
 .highlight-text {
   font-size: 11.5px;
   color: var(--text-secondary);

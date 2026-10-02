@@ -143,7 +143,7 @@ const translations = {
     'attocus-dialogue-a': '"فكّر في الحالة الأساسية (Base Case) أولاً: ما هي أصغر مدخلة يمكننا حلها مباشرة دون تكرار؟"',
     'attocus-hud-focus': '● تتبع التركيز: منتبه (100%)',
     'attocus-hud-privacy': 'خصوصية تامة: لا يتم حفظ البيانات',
-    'attocus-num2': 'تسريب 0ms',
+    'attocus-num2': '0 تسريب',
     'attocus-num3': '4 وكلاء',
     'uniclubs-hud-badge': 'ترشيح ذكي (0.8477 NDCG)',
     'uniclubs-hud-title': 'معسكر الذكاء الاصطناعي السحابي',
