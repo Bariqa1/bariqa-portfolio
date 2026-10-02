@@ -12,6 +12,12 @@
 
 Honors Computer Science Graduate, AI Engineer, and Full-Stack Developer bridging the gap between cutting-edge machine intelligence and intuitive applications. Specializing in orchestrating Autonomous Multi-Agent systems, designing Edge Computer Vision pipelines, and architecting robust end-to-end platforms.
 
+<p align="center">
+  <a href="https://bariqa1.github.io/bariqa-portfolio/">
+    <img src="./portfolio-preview.png" alt="Bariqa Aljarallah Portfolio" width="100%" />
+  </a>
+</p>
+
 ---
 
 ## Key Benchmarks
