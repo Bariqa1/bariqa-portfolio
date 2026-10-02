@@ -3,6 +3,7 @@
    Pristine Interactions, Micro-Audio Haptics, Simulation & Language Switching
    ========================================================================== */
 
+
 // --- 1. Synthesized Apple Tactile Sound (Web Audio API) ---
 class AppleHaptics {
   constructor() {
@@ -60,246 +61,310 @@ class AppleHaptics {
 
 const haptics = new AppleHaptics();
 
-// --- 2. Bilingual Dictionary (Saudi Arabic & English) ---
+// --- 2. Bilingual Dictionary (Natural Saudi Arabic & English) ---
 const translations = {
   ar: {
     'lang-btn': 'English',
     'nav-name': 'بارقة الجارالله',
-    'nav-role': 'مهندسة ذكاء اصطناعي',
-    'nav-projects': 'الأنظمة',
-    'nav-lab': 'المختبر التفاعلي',
-    'nav-orchestration': 'معمارية الوكلاء',
-    'nav-experience': 'المسيرة',
-    'nav-credentials': 'الاعتمادات',
+    'nav-role': 'مهندسة ذكاء اصطناعي & Full-Stack',
+    'nav-projects': 'المشاريع',
+    'nav-experience': 'الخبرات والتعليم',
+    'nav-credentials': 'الشهادات',
     'nav-contact': 'تواصل معي',
-    'mob-projects': 'الأنظمة والمشاريع',
-    'mob-lab': 'المختبر التفاعلي (محاكاة)',
-    'mob-orchestration': 'معمارية الوكلاء (Live Sim)',
-    'mob-experience': 'المسيرة والتعليم',
-    'mob-credentials': 'الاعتمادات المهنية',
+    'mob-projects': 'المشاريع',
+    'mob-experience': 'الخبرات والتعليم',
+    'mob-credentials': 'الشهادات والاعتمادات',
     'mob-copy': 'نسخ البريد الإلكتروني',
-    'hero-badge': 'خريجة علوم حاسب بمرتبة الشرف · المملكة العربية السعودية',
-    'hero-title-1': 'هندسة أنظمة الذكاء الاصطناعي الذاتية،',
-    'hero-title-2': 'والرؤية الحاسوبية اللحظية.',
-    'hero-title': 'هندسة أنظمة الذكاء الاصطناعي الذاتية، <br class="desktop-br"><span class="text-gradient">والرؤية الحاسوبية فائقة السرعة</span>.',
-    'hero-sub': 'أصمم وأبتكر معمارية الوكلاء متعددي المهام (Multi-Agent Orchestration)، وأبني خطوط المعالجة البصرية على الحافة بزمن استجابة فائق يبدأ من 12.5ms. برمجيات ذاتية، آمنة ومصممة لبيئات العمل الفعلية.',
-    'spec1-title': 'زمن الاستجابة على الحافة',
-    'spec1-sub': 'EfficientNet-B0 مهيأ سريرياً',
-    'spec2-title': 'معالجة الفيديو اللحظية',
-    'spec2-sub': '3 نماذج متزامنة عبر YOLOv11',
-    'spec3-title': 'الدقة السريرية المتجاورة',
-    'spec3-sub': 'تصنيف هرمي دقيق للأمراض',
-    'spec4-title': 'خفض استهلاك الرموز',
-    'spec4-sub': 'تخزين مؤقت ونطاق جغرافي ذكي',
-    'cta-explore': 'استعراض الأنظمة التقنية',
+    'mob-meta-exp': 'مرتبة الشرف',
+    'mob-meta-proj': '4 مشاريع',
+    'mob-meta-cred': '10 معتمدة',
+    'hero-badge': 'حديثة تخرج · خريجة علوم حاسب بمرتبة الشرف · المملكة العربية السعودية',
+    'hero-title-1': 'تطوير أنظمة الذكاء الاصطناعي،',
+    'hero-title-2': 'وتطبيقات الرؤية الحاسوبية.',
+    'hero-title': 'تطوير أنظمة الذكاء الاصطناعي، <br class="desktop-br"><span class="text-gradient">وتطبيقات الرؤية الحاسوبية</span>.',
+    'hero-sub': 'مهندسة ذكاء اصطناعي ومطوّرة Full-Stack، متخصصة في بناء أنظمة الوكلاء (Multi-Agent Systems) وتطبيقات الرؤية الحاسوبية. أركز على تحويل النماذج إلى حلول عملية وسريعة تعمل بكفاءة على أرض الواقع.',
+    'spec1-title': 'زمن الاستجابة',
+    'spec1-sub': 'استنتاج نموذج EfficientNet-B0',
+    'spec2-title': 'معالجة الفيديو المباشر',
+    'spec2-sub': '3 تدفقات متزامنة عبر YOLOv11',
+    'spec3-title': 'دقة الفحص الطبي',
+    'spec3-sub': 'فحص وتصنيف الأمراض الجلدية',
+    'spec4-title': 'توفير استهلاك الرموز',
+    'spec4-sub': 'تخزين مؤقت وتحديد سياق الاستعلام',
+    'cta-explore': 'استعراض الخبرات والمشاريع',
     'cta-copy': 'نسخ البريد الإلكتروني',
-    'sec-systems': 'الأنظمة والمشاريع الرئيسية.',
-    'sec-systems-sub': 'أربعة حلول برمجية نوعية، صُممت وبُنيت وفق أعلى معايير الجاهزية والاعتمادية.',
-    'filter-all': 'كافة الأنظمة',
-    'filter-agentic': 'الوكلاء الذاتية',
+    'sec-systems': 'المشاريع',
+    'sec-systems-sub': 'مشاريع عملية طورتها بالتركيز على دقة النماذج وسرعة التنفيذ وجودة الكود.',
+    'filter-all': 'كافة المشاريع',
+    'filter-agentic': 'أنظمة الوكلاء',
     'filter-vision': 'الرؤية الحاسوبية',
     'filter-fullstack': 'تطبيقات متكاملة',
-    'tag-mhrsd': 'وزارة الموارد البشرية 3337 & ISO 7243',
+    'tag-mhrsd': 'معايير السلامة الصناعية (MHRSD 3337)',
     'tag-langgraph': 'LangGraph & YOLOv11',
-    'btn-sim': 'المحاكاة اللحظية',
-    'aurax-title': 'AuraX — منصة السلامة الصناعية وإدارة المخاطر بالوكلاء الذاتية',
-    'aurax-desc': 'منصة صناعية متكاملة توظف 5 وكلاء ذكاء اصطناعي (الرؤية، الامتثال، البيئة، التنبؤ، المساعد) للرصد الاستباقي لمخاطر المصانع، وإدارة الدخول البصري الذكي (Visual RBAC) ومنع الحوادث لحظياً.',
+    'aurax-title': 'AuraX — نظام مراقبة السلامة الصناعية',
+    'aurax-desc': 'نظام لمراقبة السلامة في المنشآت يربط بين نماذج الرؤية الحاسوبية (YOLOv11) لرصد المخاطر مثل غياب خوذات الأمان أو حالات السقوط، مع وكلاء أذكياء مبنيين بـ LangGraph لإرسال التنبيهات وإدارة الصلاحيات لحظياً.',
     'aurax-h1': 'معالجة 3 كاميرات متزامنة بزمن 26.7ms',
-    'aurax-h2': 'دقة رصد حوادث السقوط واكتشاف الخوذات',
-    'aurax-h3': 'اجتياز كامل لاختبارات Pytest الآلية',
-    'tag-socratic': 'المنهج السقراطي',
-    'tag-privacy': 'خصوصية كاملة على الجهاز',
-    'btn-arch': 'المعمارية',
-    'attocus-title': 'Attocus — مرافق دراسي ذاتي بوكلاء متعددي المهام',
-    'attocus-desc': 'بيئة تعليمية ذكية تنظم 4 وكلاء معرفيين يعتمدون الأسلوب السقراطي لتحفيز التفكير. مزود بخط رؤية حاسوبية محلي (YOLO11n + MediaPipe FaceMesh) لتتبع التركيز عبر WebSockets دون مغادرة أي بيانات لجهاز الطالب.',
-    'attocus-h1': 'اختبار تقييم DeepEval مجتاز بنجاح',
-    'attocus-h2': 'معالجة الفيديو في الذاكرة بدون حفظ',
-    'attocus-h3': 'توجيه ودعم إدراكي ذاتي ذكي',
-    'tag-clinical': 'معايير دقة سريرية',
-    'tag-9class': 'تشخيص 9 أمراض جلدية',
-    'btn-benchmark': 'المؤشرات السريرية',
-    'derma-title': 'DermaSense — نظام فحص جلدي هرمي بالتعلم العميق',
-    'derma-desc': 'خط تشخيص طبي على مرحلتين يعتمد نموذج EfficientNet-B0 ودالة الخسارة الطبية MedicalFocalLoss لتشخيص تفريقي لـ 9 أمراض جلدية شائعة وخطيرة مع قياس دقيق لدرجات شدة حب الشباب (GAGS).',
-    'derma-h1': 'زمن الاستنتاج عبر TTA',
+    'aurax-h2': 'رصد حوادث السقوط واكتشاف الخوذات',
+    'aurax-h3': 'اجتياز اختبارات الفحص الآلية (Pytest)',
+    'tag-socratic': 'توجيه تفاعلي بالأسئلة',
+    'tag-privacy': 'معالجة محلية لخصوصية البيانات',
+    'attocus-title': 'Attocus — مساعد دراسي تفاعلي ذكي',
+    'attocus-desc': 'مساعد تعليمي ينظم 4 وكلاء محادثة لتوجيه الطلاب ومساعدتهم على استنتاج الحلول عبر الأسئلة والنقاش، مع متابعة مستوى التركيز محلياً على الجهاز عبر الكاميرا دون حفظ أو إرسال أي صور لضمان الخصوصية.',
+    'attocus-h1': 'اجتياز اختبارات جودة الإجابات (DeepEval)',
+    'attocus-h2': 'معالجة الفيديو محلياً دون تخزين للصور',
+    'attocus-h3': 'وكلاء متخصصون لإدارة الحوار والتوجيه',
+    'tag-clinical': 'دقة تشخيص سريرية',
+    'tag-9class': 'فحص 9 أمراض جلدية',
+    'derma-title': 'DermaSense — نظام فحص وتشخيص الأمراض الجلدية',
+    'derma-desc': 'نموذج تعلم عميق لتشخيص 9 أمراض جلدية وتحديد درجات شدة حب الشباب عبر مرحلتين، باستخدام EfficientNet-B0 ودالة الخسارة Focal Loss، مع تحقيق سرعة استنتاج عالية ودقة تصنيف دقيقة.',
+    'derma-h1': 'زمن الاستنتاج السريع (Inference Latency)',
     'derma-h2': 'دقة رصد الميلانوما (Melanoma Precision)',
-    'derma-h3': 'دقة تقييم الشدة المتجاورة (±1 Grade)',
+    'derma-h3': 'دقة تحديد شدة حب الشباب (±1 Grade)',
     'tag-recsys': 'توصية هجينة TFRS',
     'tag-flutter': 'Flutter & Gemini',
-    'uniclubs-title': 'UniClubs — تطبيق استكشاف الفعاليات والتنبؤ بالحضور',
-    'uniclubs-desc': 'تطبيق موبايل إنتاجي مبني بـ Flutter و Dart، مدعوم بمحرك ترشيح هجين (TensorFlow Recommenders) ونموذج LightGBM للتنبؤ بحجم الحضور، وتكامل ذكي مع Google Gemini لتصنيف المشاعر.',
-    'uniclubs-h1': 'مقياس ترتيب التوصيات NDCG@10',
-    'uniclubs-h2': 'تقليل هامش خطأ التنبؤ بالحضور (MAE 1.8)',
-    'uniclubs-h3': 'تصنيف مشاعر دقيق عبر نموذج Gemini',
-    'orch-title': 'معمارية وهندسة الوكلاء الذاتية.',
-    'orch-sub': 'تجربة محاكاة تفاعلية فورية لمحرك تنسيق الوكلاء (AuraX StateGraph) المبني على LangGraph.',
-    'sim-active': 'نشط وجاهز',
-    'sim-prompt': 'اختر سيناريو بيئي لاختبار استجابة الوكلاء التلقائية:',
-    'ev-heat': '🔥 إجهاد حراري شديد (معيار ISO 7243)',
-    'ev-ppe': '⚠️ غياب خوذة السلامة (التحكم البصري RBAC)',
-    'ev-fall': '🚨 رصد حالة سقوط حرجة (YOLOv11)',
-    'ag-vision': 'وكيل الرؤية',
-    'ag-compliance': 'وكيل الامتثال',
-    'metric-mhrsd': 'قرار 3337',
-    'ag-env': 'وكيل البيئة',
-    'ag-mitigation': 'وكيل الاستجابة',
-    'metric-dispatch': 'تدخل فوري',
-    'exp-title': 'المسيرة المهنية والتعليم.',
+    'uniclubs-title': 'UniClubs — تطبيق فعاليات الأندية الجامعية',
+    'uniclubs-desc': 'تطبيق هاتف مبني بـ Flutter و Dart يساعد الطلاب على استكشاف الأنشطة والفعاليات الجامعية، مدعوم بنظام توصية يقترح الفعاليات بناءً على الاهتمامات، ونموذج للتنبؤ بأعداد الحضور، وتحليل مشاعر آراء الطلاب عبر Gemini.',
+    'uniclubs-h1': 'دقة ترتيب الفعاليات المقترحة (NDCG@10)',
+    'uniclubs-h2': 'تقليل نسبة الخطأ في توقع أعداد الحضور (MAE 1.8)',
+    'uniclubs-h3': 'تصنيف دقيق لمشاعر وتقييمات الطلاب عبر Gemini',
+    'link-code': 'الكود',
+    'aurax-hud-fps': '<span class="hud-dot"></span> مباشر 37.5 FPS',
+    'aurax-hud-cam': 'كاميرا 03 // المنطقة 4',
+    'aurax-hud-rbac': 'الصلاحيات: نشطة',
+    'aurax-hud-person': 'شخص [98.2%]',
+    'aurax-hud-helmet': 'خوذة الأمان: مرصودة',
+    'aurax-hud-breach': 'تجاوز منطقة [محظورة]',
+    'aurax-hud-level': 'مستوى الصلاحية: 3',
+    'derma-hud-melanoma': 'دقة فحص الميلانوما: 95.5%',
+    'derma-hud-stage1': 'المرحلة 1: تصنيف 9 أمراض',
+    'derma-hud-stage2': 'المرحلة 2: شدة حب الشباب (99.55%)',
+    'attocus-dialogue-q': '"كيف أبدأ في حل مسألة البرمجة الديناميكية هذه؟"',
+    'attocus-dialogue-role': 'الموجّه الذكي',
+    'attocus-dialogue-a': '"فكّر في الحالة الأساسية (Base Case) أولاً: ما هي أصغر مدخلة يمكننا حلها مباشرة دون تكرار؟"',
+    'attocus-hud-focus': '● تتبع التركيز: منتبه (100%)',
+    'attocus-hud-privacy': 'خصوصية تامة: لا يتم حفظ البيانات',
+    'attocus-num2': 'تسريب 0ms',
+    'attocus-num3': '4 وكلاء',
+    'uniclubs-hud-badge': 'ترشيح ذكي (0.8477 NDCG)',
+    'uniclubs-hud-title': 'معسكر الذكاء الاصطناعي السحابي',
+    'uniclubs-hud-meta': 'حضور متوقع: 94% (LightGBM MAE 1.8)',
+    'uniclubs-num2': '86% خفض',
+    'exp-title': 'الخبرات والتعليم',
+    'exp1-date': 'أغسطس 2026 – أكتوبر 2026',
     'badge-champion': '🏆 بطل الأسبوع (Champion of the Week)',
     'exp1-org': 'الأكاديمية السعودية الرقمية (SDA) بالتعاون مع WeCloudData',
-    'exp1-role': 'معسكر الذكاء الاصطناعي الذاتي (Agentic AI Bootcamp) — 280 ساعة مكثفة',
-    'exp1-desc': 'تطوير أنظمة الوكلاء المتعددين التوليدية، وبناء خطط المهام الإدراكية، وأطر تقييم RAG الإنتاجية باستخدام DeepEval و LangGraph. التتويج بلقب بطل الأسبوع لجودة المعمارية البرمجية المنفذة.',
+    'exp1-role': 'معسكر الذكاء الاصطناعي للوكلاء (Agentic AI) — 280 ساعة',
+    'exp1-desc': 'تدريب مكثف ركز على بناء أنظمة الوكلاء الذاتية وتطبيقات RAG واختبار جودة النماذج اللغوية باستخدام LangGraph و DeepEval. حصلت فيه على تقدير Champion of the Week عن تصميم معمارية الوكلاء.',
+    'exp2-date': 'يونيو 2025 – أغسطس 2025',
     'badge-intern': 'تدريب مهني',
     'exp2-org': 'الأساليب الذكية (Smart Methods)',
-    'exp2-role': 'متدربة في هندسة الذكاء الاصطناعي والأنظمة المتكاملة (420 ساعة)',
-    'exp2-desc': 'هندسة خطوط معالجة الرؤية الحاسوبية على الحافة باستخدام YOLO و OpenCV، وتطوير شات بوت ذكاء اصطناعي تفاعلي بالصوت يعتمد تقنيات Vosk ونموذج Cohere اللغوي.',
-    'badge-gpa': 'معدل 4.62 / 5.00 · ممتاز',
+    'exp2-role': 'متدربة في هندسة الذكاء الاصطناعي (420 ساعة)',
+    'exp2-desc': 'تدريب عملي على تطبيقات الرؤية الحاسوبية وتتبع العناصر باستخدام OpenCV و YOLO، وتطوير روبوت محادثة تفاعلي بالأوامر الصوتية بالاعتماد على مكتبة Vosk ونموذج Cohere.',
+    'exp3-date': 'يوليو 2021 – يونيو 2026',
+    'badge-gpa': 'معدل ممتاز مع مرتبة الشرف',
     'exp3-org': 'جامعة القصيم',
-    'exp3-degree': 'بكالوريوس علوم الحاسب (مرتبة الشرف الثانية)',
-    'exp3-desc': 'تأسيس أكاديمي عميق في الخوارزميات، والأنظمة الموزعة، والتعلم العميق، وهندسة قواعد البيانات والشبكات.',
-    'cred-title': 'الاعتمادات والشهادات المهنية.',
-    'cred-sub': 'شهادات معتمدة صادرة من أعلى الهيئات والمؤسسات التقنية الوطنية والعالمية.',
-    'cert1-issuer': 'الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا)',
-    'cert1-name': 'ممارس معتمد في تعلم الآلة (ML Practitioner)',
-    'cert2-issuer': 'أمازون ويب سيرفيسز (AWS) / الأكاديمية الرقمية',
-    'cert2-name': 'AWS Certified Cloud Practitioner',
-    'cert3-issuer': 'جامعة الملك عبدالله للعلوم والتقنية (KAUST) / GDG',
-    'cert3-name': 'معسكر الرؤية الحاسوبية المتقدمة',
+    'exp3-degree': 'بكالوريوس علوم الحاسب',
+    'exp3-desc': 'دراسة متخصصة في علوم الحاسب بتقدير ممتاز، شملت الخوارزميات، والذكاء الاصطناعي، وهندسة البرمجيات، وقواعد البيانات.',
+    'cred-title': 'الشهادات والاعتمادات',
+    'cred-sub': 'شهادات مهنية ودورات متقدمة في مجالات الذكاء الاصطناعي وتطوير البرمجيات والحوسبة السحابية.',
+    'cert-verify': 'توثيق',
+    'cert1-badge': '🏆 بطل الأسبوع',
+    'cert1-issuer': 'الأكاديمية السعودية الرقمية (SDA) بالتعاون مع WeCloudData',
+    'cert1-name': 'معسكر الذكاء الاصطناعي للوكلاء (Agentic AI) — 280 ساعة',
+    'cert1-date': 'أكتوبر 2026',
+    'cert2-issuer': 'الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا)',
+    'cert2-name': 'ممارس معتمد في تعلم الآلة (ML Practitioner)',
+    'cert2-date': 'ديسمبر 2023',
+    'cert3-issuer': 'جامعة القصيم',
+    'cert3-name': 'الذكاء الاصطناعي التوليدي (Generative AI)',
+    'cert3-date': 'فبراير 2026',
     'cert4-issuer': 'أكاديمية طويق',
-    'cert4-name': 'تطوير البرمجيات المتكاملة (Django & Full Stack)',
-    'contact-status': 'متاحة للانضمام للفرص النوعية وهندسة الذكاء الاصطناعي',
-    'contact-h2': 'لنبتكر معاً معايير استثنائية.',
-    'contact-desc': 'تسخير معمارية الوكلاء الذاتية ونماذج الرؤية الحاسوبية الفائقة لصناعة برمجيات ذكية تترك أثراً واقعياً. مرحباً بالتواصل لمناقشة الفرص الاستراتيجية والمشاريع النوعية.',
+    'cert4-name': 'تطوير البرمجيات باستخدام Django & Full-Stack',
+    'cert4-date': 'مارس 2026',
+    'cert5-issuer': 'قوقل (Google)',
+    'cert5-name': 'شهادة تحليل البيانات الاحترافية (Google Data Analytics)',
+    'cert5-date': 'مارس 2024',
+    'cert6-issuer': 'أمازون ويب سيرفيسز (AWS)',
+    'cert6-name': 'خريجة أكاديمية AWS — أساسيات تعلم الآلة (ML Foundations)',
+    'cert6-date': 'أغسطس 2026',
+    'cert7-issuer': 'جامعة القصيم',
+    'cert7-name': 'برنامج الابتكار الصيفي — مسار وكلاء الذكاء الاصطناعي (AI Agents Track)',
+    'cert7-date': 'يوليو 2026',
+    'cert8-issuer': 'جامعة الملك عبدالله للعلوم والتقنية (KAUST) / GDG',
+    'cert8-name': 'معسكر الرؤية الحاسوبية والتعلم العميق (Computer Vision)',
+    'cert8-date': 'نوفمبر 2025',
+    'cert9-issuer': 'أكاديمية طويق',
+    'cert9-name': 'شهادة اختبار اختراق تطبيقات الويب (eWPT)',
+    'cert9-date': 'مايو 2024',
+    'cert10-issuer': 'أمازون ويب سيرفيسز (AWS) / الأكاديمية الرقمية',
+    'cert10-name': 'ممارس سحابي معتمد (AWS Cloud Practitioner)',
+    'cert10-date': 'فبراير 2024',
+    'contact-status': 'متاحة للفرص الوظيفية والمشاريع',
+    'contact-h2': 'يسعدني التواصل والتعاون',
+    'contact-desc': 'إذا كان لديك فرصة وظيفية، أو مشروع في مجالات الذكاء الاصطناعي وتطبيقات الرؤية الحاسوبية، أو حاب تناقش فكرة تقنية، يسعدني تواصلك معي عبر البريد أو LinkedIn.',
     'cta-copy-email': 'نسخ البريد الإلكتروني',
     'cta-open-mail': 'إرسال رسالة مباشرة',
     'location-text': '📍 المملكة العربية السعودية',
-    'footer-cr': '© 2026 بارقة الجارالله · جميع الحقوق محفوظة',
-    'footer-note': 'المملكة العربية السعودية'
+    'footer-cr': '© 2026 بارقة الجارالله',
+    'footer-note': 'حديثة تخرج · خريجة علوم حاسب بمرتبة الشرف · المملكة العربية السعودية'
   },
   en: {
     'lang-btn': 'العربية',
     'nav-name': 'Bariqa Aljarallah',
-    'nav-role': 'AI / ML Engineer',
-    'nav-projects': 'Key Systems',
-    'nav-lab': 'Interactive Lab',
-    'nav-orchestration': 'Orchestration',
-    'nav-experience': 'Trajectory',
-    'nav-credentials': 'Credentials',
-    'nav-contact': 'Get in Touch',
-    'mob-projects': 'Featured Systems',
-    'mob-lab': 'Interactive Lab (Sim)',
-    'mob-orchestration': 'Agentic Orchestration (Live Sim)',
+    'nav-role': 'AI & Full-Stack Engineer',
+    'nav-projects': 'Projects',
+    'nav-experience': 'Experience',
+    'nav-credentials': 'Certifications',
+    'nav-contact': 'Contact',
+    'mob-projects': 'Projects',
     'mob-experience': 'Experience & Education',
-    'mob-credentials': 'Verified Credentials',
-    'mob-copy': 'Copy Email Address',
-    'hero-badge': 'Honors Computer Science Graduate · Saudi Arabia',
-    'hero-title-1': 'Engineering autonomous AI architectures,',
-    'hero-title-2': 'and real-time computer vision.',
-    'hero-title': 'Engineering autonomous AI agents, <br class="desktop-br"><span class="text-gradient">and low-latency edge computer vision</span>.',
-    'hero-sub': 'I architect end-to-end multi-agent orchestration platforms, high-speed edge vision inference pipelines, and production-grade software with latencies starting at 12.5ms. Built for real-world enterprise deployment.',
-    'spec1-title': 'Edge Inference Latency',
-    'spec1-sub': 'Fine-tuned EfficientNet-B0',
-    'spec2-title': 'Real-Time Edge Stream',
-    'spec2-sub': '3 Concurrent Models (YOLOv11)',
-    'spec3-title': 'Clinical Adjacent Accuracy',
-    'spec3-sub': 'Hierarchical Medical Diagnosis',
+    'mob-credentials': 'Certifications',
+    'mob-copy': 'Copy Email',
+    'mob-meta-exp': 'Honors',
+    'mob-meta-proj': '4 Projects',
+    'mob-meta-cred': '10 Certs',
+    'hero-badge': 'Fresh Graduate · Honors Computer Science Graduate · Saudi Arabia',
+    'hero-title-1': 'Building practical AI systems,',
+    'hero-title-2': 'and computer vision applications.',
+    'hero-title': 'Building practical AI systems, <br class="desktop-br"><span class="text-gradient">and computer vision applications</span>.',
+    'hero-sub': 'AI & Full-Stack Engineer specializing in multi-agent systems and computer vision. I focus on turning machine learning models into fast, reliable applications that work effectively in real-world environments.',
+    'spec1-title': 'Inference Latency',
+    'spec1-sub': 'EfficientNet-B0 inference',
+    'spec2-title': 'Live Video Processing',
+    'spec2-sub': '3 concurrent streams via YOLOv11',
+    'spec3-title': 'Medical Screening',
+    'spec3-sub': 'Dermatology classification & grading',
     'spec4-title': 'Token Cost Reduction',
-    'spec4-sub': 'Smart Geofencing & Caching',
-    'cta-explore': 'Explore Technical Systems',
-    'cta-copy': 'Copy Email Address',
-    'sec-systems': 'Key Technical Systems.',
-    'sec-systems-sub': 'Four flagship engineering solutions designed and built to enterprise production standards.',
-    'filter-all': 'All Systems',
-    'filter-agentic': 'Agentic AI',
+    'spec4-sub': 'Prompt caching & context scoping',
+    'cta-explore': 'Explore Experience & Projects',
+    'cta-copy': 'Copy Email',
+    'sec-systems': 'Projects',
+    'sec-systems-sub': 'Practical systems I built with a focus on model accuracy, fast execution, and clean code.',
+    'filter-all': 'All Projects',
+    'filter-agentic': 'Agent Systems',
     'filter-vision': 'Computer Vision',
-    'filter-fullstack': 'Full-Stack',
-    'tag-mhrsd': 'MHRSD 3337 & ISO 7243',
+    'filter-fullstack': 'Full Stack',
+    'tag-mhrsd': 'Industrial Safety (MHRSD 3337)',
     'tag-langgraph': 'LangGraph & YOLOv11',
-    'btn-sim': 'Simulate Runtime',
-    'aurax-title': 'AuraX — Autonomous Industrial Safety & Hazard Intelligence',
-    'aurax-desc': 'Enterprise multi-agent safety platform orchestrating 5 specialized agents (Vision, Compliance, Environment, Prediction, Assistant) for real-time hazard mitigation, Physical RBAC, and automated incident prevention.',
-    'aurax-h1': '3 concurrent YOLO models at 26.7ms latency',
-    'aurax-h2': '100% recall in fall and hard-hat detection',
-    'aurax-h3': '100% pass rate across 83 automated Pytest cases',
-    'tag-socratic': 'Socratic Pedagogy',
-    'tag-privacy': 'Zero Data Leakage (Edge)',
-    'btn-arch': 'Architecture',
-    'attocus-title': 'Attocus — Autonomous Multi-Agent Study Co-Pilot',
-    'attocus-desc': 'Intelligent study ecosystem orchestrating 4 specialized cognitive agents utilizing Socratic pedagogy. Features private edge vision with YOLO11n and MediaPipe FaceMesh via in-memory WebSockets with zero data retention.',
-    'attocus-h1': '78 / 78 DeepEval test scenarios passed',
-    'attocus-h2': 'In-memory WebSocket stream processing',
-    'attocus-h3': 'Autonomous cognitive & focus intervention',
-    'tag-clinical': 'Clinical Grade',
-    'tag-9class': '9-Class Dermatology',
-    'btn-benchmark': 'Clinical Metrics',
-    'derma-title': 'DermaSense — Hierarchical Clinical Screening Pipeline',
-    'derma-desc': 'Two-stage clinical deep learning pipeline using fine-tuned EfficientNet-B0 and MedicalFocalLoss. Delivers differential diagnosis across 9 skin conditions and granular acne severity grading (GAGS).',
-    'derma-h1': 'Edge inference latency via TTA',
-    'derma-h2': 'Melanoma detection precision metric',
-    'derma-h3': 'Adjacent severity grading accuracy (±1 Grade)',
+    'aurax-title': 'AuraX — Industrial Safety Monitoring System',
+    'aurax-desc': 'An industrial safety monitoring platform that connects YOLOv11 vision models for hazard detection (such as missing hard hats or worker falls) with LangGraph agents to automate alerts and zone access in real time.',
+    'aurax-h1': '3 concurrent camera streams at 26.7ms',
+    'aurax-h2': 'Accurate detection of falls & safety gear',
+    'aurax-h3': 'Automated test suite passing (Pytest)',
+    'tag-socratic': 'Interactive Guided Learning',
+    'tag-privacy': 'Private On-Device Processing',
+    'attocus-title': 'Attocus — Interactive AI Study Assistant',
+    'attocus-desc': 'An educational assistant orchestrating 4 conversational agents that guide students through problem-solving step by step. Tracks focus locally in-browser without storing or transmitting photos to protect privacy.',
+    'attocus-h1': 'DeepEval evaluation benchmark passed',
+    'attocus-h2': 'Local in-memory video processing',
+    'attocus-h3': 'Specialized agents for guidance & dialogue',
+    'tag-clinical': 'Clinical Accuracy',
+    'tag-9class': '9 Skin Conditions',
+    'derma-title': 'DermaSense — Skin Condition Screening System',
+    'derma-desc': 'A two-stage deep learning pipeline using EfficientNet-B0 and Focal Loss to screen 9 dermatological conditions and accurately grade acne severity with fast inference times.',
+    'derma-h1': 'Fast inference latency (TTA)',
+    'derma-h2': 'Melanoma detection precision',
+    'derma-h3': 'Acne severity grading accuracy (±1 Grade)',
     'tag-recsys': 'Hybrid RecSys (TFRS)',
     'tag-flutter': 'Flutter & Gemini',
-    'uniclubs-title': 'UniClubs — AI Event Discovery & Attendance Forecasting',
-    'uniclubs-desc': 'Production Flutter and Dart mobile application backed by TensorFlow Recommenders (TFRS) for hybrid ranking and a LightGBM model for accurate event attendance forecasting with Gemini sentiment classification.',
-    'uniclubs-h1': 'TFRS ranking NDCG@10 evaluation metric',
-    'uniclubs-h2': 'Baseline attendance error reduction (MAE 1.8)',
-    'uniclubs-h3': 'Zero-shot sentiment classification (1.00 F1)',
-    'orch-title': 'Autonomous Multi-Agent Architecture.',
-    'orch-sub': 'Live interactive simulation of the AuraX StateGraph engine powered by LangGraph and Python 3.12.',
-    'sim-active': 'Active & Ready',
-    'sim-prompt': 'Select an environmental trigger to inspect autonomous multi-agent arbitration:',
-    'ev-heat': '🔥 Extreme Heat Stress (ISO 7243 Standard)',
-    'ev-ppe': '⚠️ Missing Hard Hat (Visual RBAC Gate)',
-    'ev-fall': '🚨 Critical Fall Detected (YOLOv11 Optical Flow)',
-    'ag-vision': 'Vision Agent',
-    'ag-compliance': 'Compliance Agent',
-    'metric-mhrsd': 'MHRSD 3337',
-    'ag-env': 'Environment Agent',
-    'ag-mitigation': 'Mitigation Agent',
-    'metric-dispatch': 'Instant Action',
-    'exp-title': 'Trajectory & Education.',
+    'uniclubs-title': 'UniClubs — Student Event Discovery App',
+    'uniclubs-desc': 'A Flutter and Dart mobile app helping students discover campus events. Features an interest-based recommendation system, an attendance forecasting model, and review sentiment analysis powered by Gemini.',
+    'uniclubs-h1': 'Ranking accuracy score (NDCG@10)',
+    'uniclubs-h2': 'Reduced attendance forecasting error (MAE 1.8)',
+    'uniclubs-h3': 'Sentiment analysis score via Gemini',
+    'link-code': 'Code',
+    'aurax-hud-fps': '<span class="hud-dot"></span> LIVE 37.5 FPS',
+    'aurax-hud-cam': 'CAM-03 // ZONE 4',
+    'aurax-hud-rbac': 'RBAC ACTIVE',
+    'aurax-hud-person': 'PERSON [98.2%]',
+    'aurax-hud-helmet': 'HARD HAT: DETECTED',
+    'aurax-hud-breach': 'ZONE BREACH [RESTRICTED]',
+    'aurax-hud-level': 'RBAC: LEVEL 3',
+    'derma-hud-melanoma': 'MELANOMA PRECISION: 95.5%',
+    'derma-hud-stage1': 'STAGE 1: 9-CLASS CNN',
+    'derma-hud-stage2': 'STAGE 2: ACNE GAGS ±1 (99.55%)',
+    'attocus-dialogue-q': '"How do I begin solving this dynamic programming problem?"',
+    'attocus-dialogue-role': 'AI TUTOR',
+    'attocus-dialogue-a': '"Consider the base case first: what is the simplest subproblem you can solve directly without recursion?"',
+    'attocus-hud-focus': '● Gaze: In-Focus (100%)',
+    'attocus-hud-privacy': 'Zero Data Retention',
+    'attocus-num2': '0ms Leak',
+    'attocus-num3': '4 Agents',
+    'uniclubs-hud-badge': 'AI RECOMMENDED (0.8477 NDCG)',
+    'uniclubs-hud-title': 'Cloud AI Bootcamp',
+    'uniclubs-hud-meta': 'Predicted Attendance: 94% (LightGBM MAE 1.8)',
+    'uniclubs-num2': '86% REDUCTION',
+    'exp-title': 'Experience & Education',
+    'exp1-date': 'August 2026 – October 2026',
     'badge-champion': '🏆 Champion of the Week',
     'exp1-org': 'Saudi Digital Academy (SDA) / WeCloudData',
-    'exp1-role': 'Agentic AI Bootcamp (280 Intensive Hours)',
-    'exp1-desc': 'Engineered scalable multi-agent systems, autonomous cognitive task planners, and production RAG evaluation frameworks with DeepEval and LangGraph. Awarded Champion of the Week for superior system architecture.',
-    'badge-intern': 'Engineering Internship',
+    'exp1-role': 'Agentic AI Bootcamp — 280 Hours',
+    'exp1-desc': 'Intensive training focused on building multi-agent systems, RAG pipelines, and model evaluation using LangGraph and DeepEval. Awarded Champion of the Week for system architecture design.',
+    'exp2-date': 'June 2025 – August 2025',
+    'badge-intern': 'Internship',
     'exp2-org': 'Smart Methods',
-    'exp2-role': 'AI & Full-Stack Engineering Intern (420 Hours)',
-    'exp2-desc': 'Engineered real-time computer vision pipelines utilizing YOLO and OpenCV for edge object detection, and built an interactive voice AI chatbot using Vosk speech synthesis and Cohere LLM.',
-    'badge-gpa': 'GPA 4.62 / 5.00 · Honors',
+    'exp2-role': 'AI Engineering Intern (420 Hours)',
+    'exp2-desc': 'Hands-on internship developing computer vision workflows with OpenCV and YOLO, and building a voice-enabled conversational assistant using Vosk and Cohere.',
+    'exp3-date': 'July 2021 – June 2026',
+    'badge-gpa': 'Excellent with Honors',
     'exp3-org': 'Qassim University',
-    'exp3-degree': "Bachelor's Degree in Computer Science (Second Class Honors)",
-    'exp3-desc': 'Foundational rigor across Algorithms, Distributed Systems, Deep Learning, and Database Architecture. Graduated with an Excellent rating with Second Class Honors.',
-    'cred-title': 'Verified Credentials.',
-    'cred-sub': 'Official certifications issued by premier national and global technology authorities.',
-    'cert1-issuer': 'Saudi Data & AI Authority (SDAIA)',
-    'cert1-name': 'Machine Learning Practitioner',
-    'cert2-issuer': 'Amazon Web Services (AWS) / SDA',
-    'cert2-name': 'AWS Certified Cloud Practitioner',
-    'cert3-issuer': 'King Abdullah University of Science & Technology (KAUST) / GDG',
-    'cert3-name': 'Computer Vision Bootcamp',
+    'exp3-degree': "Bachelor's Degree in Computer Science",
+    'exp3-desc': 'Graduated with honors and an Excellent rating, focusing on algorithms, artificial intelligence, software engineering, and database systems.',
+    'cred-title': 'Certifications',
+    'cred-sub': 'Professional certifications and advanced courses in AI, software development, and cloud computing.',
+    'cert-verify': 'Verify',
+    'cert1-badge': '🏆 Champion of the Week',
+    'cert1-issuer': 'Saudi Digital Academy (SDA) / WeCloudData',
+    'cert1-name': 'Agentic AI Bootcamp — 280 Hours',
+    'cert1-date': 'October 2026',
+    'cert2-issuer': 'Saudi Data & AI Authority (SDAIA)',
+    'cert2-name': 'Certified Machine Learning Practitioner',
+    'cert2-date': 'December 2023',
+    'cert3-issuer': 'Qassim University',
+    'cert3-name': 'Generative AI',
+    'cert3-date': 'February 2026',
     'cert4-issuer': 'Tuwaiq Academy',
-    'cert4-name': 'Full Stack Web Development (Django)',
-    'contact-status': 'Available for High-Impact AI Roles & Engineering Initiatives',
-    'contact-h2': "Let's architect something exceptional together.",
-    'contact-desc': 'Architecting autonomous multi-agent intelligence and low-latency computer vision into robust production systems. Open to high-impact engineering initiatives and strategic collaborations.',
-    'cta-copy-email': 'Copy Email Address',
-    'cta-open-mail': 'Open Email Client',
+    'cert4-name': 'Full-Stack Web Development using Django',
+    'cert4-date': 'March 2026',
+    'cert5-issuer': 'Google',
+    'cert5-name': 'Google Data Analytics Professional Certificate',
+    'cert5-date': 'March 2024',
+    'cert6-issuer': 'Amazon Web Services (AWS)',
+    'cert6-name': 'AWS Academy Graduate — Machine Learning Foundations',
+    'cert6-date': 'August 2026',
+    'cert7-issuer': 'Qassim University',
+    'cert7-name': 'Innovation Summer Program — AI Agents Track',
+    'cert7-date': 'July 2026',
+    'cert8-issuer': 'King Abdullah University of Science & Technology (KAUST) / GDG',
+    'cert8-name': 'Computer Vision Bootcamp by KAUST',
+    'cert8-date': 'November 2025',
+    'cert9-issuer': 'Tuwaiq Academy',
+    'cert9-name': 'eWPT — Certified Web Application Penetration Tester',
+    'cert9-date': 'May 2024',
+    'cert10-issuer': 'Amazon Web Services (AWS) / SDA',
+    'cert10-name': 'AWS Certified Cloud Practitioner',
+    'cert10-date': 'February 2024',
+    'contact-status': 'Available for roles and new projects',
+    'contact-h2': "Let's connect",
+    'contact-desc': 'Whether you have an open role, an AI project in mind, or just want to discuss tech, feel free to reach out via email or LinkedIn.',
+    'cta-copy-email': 'Copy Email',
+    'cta-open-mail': 'Send an Email',
     'location-text': '📍 Saudi Arabia',
-    'footer-cr': '© 2026 Bariqa Aljarallah · All rights reserved',
-    'footer-note': 'Kingdom of Saudi Arabia'
+    'footer-cr': '© 2026 Bariqa Aljarallah',
+    'footer-note': 'Fresh Graduate · Honors Computer Science Graduate · Saudi Arabia'
   }
 };
 
-let currentLang = 'ar';
+let currentLang = 'en';
 
-function setLanguage(lang) {
+function setLanguage(lang, playHaptic = false) {
   currentLang = lang;
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
   document.title = lang === 'ar' 
-    ? 'بارقة الجارالله — مهندسة ذكاء اصطناعي' 
-    : 'Bariqa Aljarallah — AI/ML Engineer';
+    ? 'بارقة الجارالله' 
+    : 'Bariqa Aljarallah';
 
   const dict = translations[lang];
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -315,7 +380,7 @@ function setLanguage(lang) {
   });
 
   try {
-    localStorage.setItem('bariqa-lang', lang);
+    localStorage.setItem('bariqa-lang-choice', lang);
   } catch (e) {}
 
   // Update simulator placeholder text
@@ -328,7 +393,9 @@ function setLanguage(lang) {
     }
   }
 
-  haptics.tick(1000, 0.02, 0.03);
+  if (playHaptic) {
+    haptics.tick(1000, 0.02, 0.03);
+  }
 }
 
 // --- 3. Apple Stacked Toast Notification System ---
@@ -429,105 +496,7 @@ function setupProjectFilters() {
   });
 }
 
-// --- 6. Multi-Agent Orchestration Simulator ---
-function setupAgentSimulator() {
-  const triggers = document.querySelectorAll('.sim-trigger');
-  const terminalCode = document.getElementById('terminal-code');
-  const terminalLatency = document.getElementById('terminal-latency');
-
-  const nodes = {
-    vision: document.getElementById('agent-vision'),
-    compliance: document.getElementById('agent-compliance'),
-    environment: document.getElementById('agent-environment'),
-    orchestrator: document.getElementById('agent-orchestrator')
-  };
-
-  const scenarios = {
-    'heat-stress': {
-      latency: '22.4ms',
-      steps: [
-        { node: 'environment', status: 'WBGT: 32.8°C' },
-        { node: 'compliance', status: 'قرار 3337 مفعل' },
-        { node: 'vision', status: 'رصد 6 عمال' },
-        { node: 'orchestrator', status: 'توجيه آلي للمظلات' }
-      ],
-      logs: `[TELEMETRY] Sensor Array Zone 4 :: WBGT Index 32.8°C (Threshold > 30°C)
-[ENVIRONMENT AGENT] Flagged critical heat stress risk complying with ISO 7243.
-[COMPLIANCE AGENT] Triggering Saudi MHRSD Ministerial Decision 3337 mandatory midday rest rules.
-[VISION AGENT] YOLOv11 stream at 37.5 FPS confirms 6 personnel in direct sunlight (Zone 4).
-[MITIGATION AGENT] Automated safety dispatch initiated: Automated hydration alarm sounding, dynamic shaded route sent to worker mobile devices. Latency: 22.4ms.`
-    },
-    'hazard-ppe': {
-      latency: '18.6ms',
-      steps: [
-        { node: 'vision', status: 'خوذة مفقودة (98.2%)' },
-        { node: 'compliance', status: 'مخالفة نطاق B' },
-        { node: 'environment', status: 'البيئة آمنة' },
-        { node: 'orchestrator', status: 'إغلاق البوابة الذكية' }
-      ],
-      logs: `[VISION AGENT] Edge stream Camera #03: Worker detected at turnstile entrance.
-[VISION AGENT] Hard Hat classification: MISSING (Confidence 98.2%). Visual RBAC check initiated.
-[COMPLIANCE AGENT] Access violation: Hard hat mandatory for high-bay manufacturing area.
-[MITIGATION AGENT] Turnstile interlock engaged. Physical RBAC rejection notice delivered via localized audio beacon. Latency: 18.6ms.`
-    },
-    'fall-event': {
-      latency: '26.7ms',
-      steps: [
-        { node: 'vision', status: 'حالة سقوط (100%)' },
-        { node: 'environment', status: 'سقالة مرتفعة' },
-        { node: 'compliance', status: 'طوارئ قصوى' },
-        { node: 'orchestrator', status: 'استدعاء المسعف فوراً' }
-      ],
-      logs: `[VISION AGENT] High-speed optical flow anomaly detected on Scaffold Camera #07 (37.5 FPS).
-[VISION AGENT] Pose estimation & bounding box trajectory confirm rapid ground impact (Fall Event, 100% recall).
-[COMPLIANCE AGENT] Immediate Severity Level 1 Incident declared. Scaffold power cutoff engaged.
-[MITIGATION AGENT] Site emergency siren triggered. On-duty medic dispatched with exact GPS coordinates (Scaffold B, Section 2). Latency: 26.7ms.`
-    }
-  };
-
-  triggers.forEach(btn => {
-    btn.addEventListener('click', () => {
-      haptics.tick(950, 0.03, 0.04);
-      triggers.forEach(t => t.classList.remove('active'));
-      btn.classList.add('active');
-
-      const eventKey = btn.dataset.event;
-      const data = scenarios[eventKey];
-      if (!data) return;
-
-      Object.values(nodes).forEach(n => {
-        if (!n) return;
-        n.classList.remove('firing');
-        const statusSpan = n.querySelector('.node-status');
-        if (statusSpan) statusSpan.textContent = 'Standby';
-      });
-
-      terminalCode.textContent = currentLang === 'ar' 
-        ? `[تنفيذ معمارية الوكلاء] الحدث: ${eventKey.toUpperCase()}...\nجاري التنسيق بين الوكلاء بدون وسيط سحابي...`
-        : `[EXECUTING STATE GRAPH] Event: ${eventKey.toUpperCase()}...\nResolving agent dependencies asynchronously...`;
-      terminalLatency.textContent = data.latency;
-
-      data.steps.forEach((step, idx) => {
-        setTimeout(() => {
-          haptics.tick(1100 + idx * 100, 0.02, 0.03);
-          const targetNode = nodes[step.node];
-          if (targetNode) {
-            targetNode.classList.add('firing');
-            const statusSpan = targetNode.querySelector('.node-status');
-            if (statusSpan) statusSpan.textContent = step.status;
-          }
-        }, idx * 160);
-      });
-
-      setTimeout(() => {
-        terminalCode.textContent = data.logs;
-        haptics.success();
-      }, data.steps.length * 160 + 100);
-    });
-  });
-}
-
-// --- 7. Project Simulator Modals ---
+// --- 6. Project Simulator Modals ---
 function setupProjectModals() {
   const modal = document.getElementById('demo-modal');
   if (!modal) return;
@@ -610,35 +579,41 @@ function setupProjectModals() {
     attocus: {
       ar: {
         tag: 'معمارية Attocus',
-        title: 'المنهج السقراطي وتتبع الوجه المحلي',
+        title: 'التوجيه التفاعلي وتتبع التركيز المحلي',
         html: `
           <div style="display:flex;flex-direction:column;gap:16px;">
             <div style="background:#f5f5f7;border-radius:14px;padding:18px;">
               <div style="font-size:13px;font-weight:700;margin-bottom:8px;">4 وكلاء ذكاء اصطناعي متكاملين</div>
               <ul style="font-size:13.5px;color:#6e6e73;display:flex;flex-direction:column;gap:8px;padding-right:16px;">
-                <li><strong>وكيل الحوار السقراطي:</strong> يقود الطالب نحو التفكير الذاتي بدلاً من تقديم الإجابة الجاهزة.</li>
+                <li><strong>وكيل التوجيه التفاعلي:</strong> يوجّه الطالب نحو استنتاج الحلول بالأسئلة بدلاً من تقديم إجابات جاهزة.</li>
                 <li><strong>وكيل التركيز وتتبع الوجه:</strong> تقنية MediaPipe FaceMesh تعمل محلياً بالكامل عبر الذاكرة.</li>
                 <li><strong>محرك الحماية:</strong> فحص المدخلات بـ Pydantic و Guardrails لمنع كسر السياق.</li>
                 <li><strong>وكيل القياس والتقييم:</strong> اختبارات مستمرة باستخدام 78 سيناريو تقييم DeepEval.</li>
               </ul>
             </div>
+            <a href="https://github.com/Bariqa1/Attocus" target="_blank" class="btn-apple-primary" style="align-self:flex-start;">
+              <span>فتح مستودع Attocus على GitHub</span>
+            </a>
           </div>
         `
       },
       en: {
         tag: 'Attocus Architecture',
-        title: 'Multi-Agent Socratic Pedagogy & Edge FaceMesh',
+        title: 'Interactive AI Tutoring & Edge FaceMesh',
         html: `
           <div style="display:flex;flex-direction:column;gap:16px;">
             <div style="background:#f5f5f7;border-radius:14px;padding:18px;">
               <div style="font-size:13px;font-weight:700;margin-bottom:8px;">4 Orchestrated Sub-Agents</div>
               <ul style="font-size:13.5px;color:#6e6e73;display:flex;flex-direction:column;gap:8px;padding-left:16px;">
-                <li><strong>Socratic Tutor Agent:</strong> Guides students through inquiry rather than direct answers.</li>
+                <li><strong>Interactive Tutor Agent:</strong> Guides students through inquiry and guided problem-solving.</li>
                 <li><strong>Focus & Gaze Agent:</strong> MediaPipe FaceMesh runs strictly in memory over WebSockets.</li>
                 <li><strong>Security Engine:</strong> Pydantic validation + Guardrails against prompt injection.</li>
                 <li><strong>Evaluation Agent:</strong> Benchmarked across 78 autonomous DeepEval test cases.</li>
               </ul>
             </div>
+            <a href="https://github.com/Bariqa1/Attocus" target="_blank" class="btn-apple-primary" style="align-self:flex-start;">
+              <span>View Attocus on GitHub</span>
+            </a>
           </div>
         `
       }
@@ -806,17 +781,21 @@ function setupLanguageSwitcher() {
     btn.addEventListener('click', () => {
       const target = btn.dataset.lang;
       if (target && target !== currentLang) {
-        setLanguage(target);
+        setLanguage(target, true);
       }
     });
   });
 
   try {
-    const saved = localStorage.getItem('bariqa-lang');
+    const saved = localStorage.getItem('bariqa-lang-choice');
     if (saved && (saved === 'ar' || saved === 'en')) {
-      setLanguage(saved);
+      setLanguage(saved, false);
+    } else {
+      setLanguage('en', false);
     }
-  } catch (e) {}
+  } catch (e) {
+    setLanguage('en', false);
+  }
 }
 
 // --- 10. Generative Neural Mesh / Particle Field Canvas ---
@@ -1075,7 +1054,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setupLanguageSwitcher();
   setupCopyEmail();
   setupProjectFilters();
-  setupAgentSimulator();
   setupProjectModals();
   setupMobileNav();
   setupNeuralCanvas();

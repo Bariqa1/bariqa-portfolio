@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>بارقة الجارالله — هندسة أنظمة الذكاء الاصطناعي</title>
-  <meta name="description" content="الملف المهني لبارقة الجارالله. مهندسة ذكاء اصطناعي متخصصة في معمارية الوكلاء الذاتية (Multi-Agent Systems) والرؤية الحاسوبية اللحظية.">
+  <title>Bariqa Aljarallah</title>
+  <meta name="description" content="Professional portfolio of Bariqa Aljarallah — AI & Full-Stack Engineer specializing in autonomous multi-agent systems and computer vision.">
+
+  <!-- Favicon / Apple & Browser Tab Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
 
   <!-- Apple-Grade Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,39 +35,29 @@
   <!-- Apple-Style Floating Island Navigation -->
   <header class="header-container">
     <nav class="nav-island" aria-label="التنقل الرئيسي">
-      <a href="#hero" class="nav-profile">
-        <div class="nav-avatar">
-          <span class="avatar-letter">ب</span>
-          <span class="status-indicator" title="متاحة للمشاريع والفرص النوعية"></span>
-        </div>
+      <a href="#hero" class="nav-profile" aria-label="بارقة الجارالله">
+        <img src="./assets/logo.png" alt="Bariqa Logo" class="nav-logo">
         <div class="nav-name-group">
-          <span class="nav-name" data-i18n="nav-name">بارقة الجارالله</span>
-          <span class="nav-role" data-i18n="nav-role">مهندسة ذكاء اصطناعي</span>
+          <span class="nav-name" data-i18n="nav-name">Bariqa Aljarallah</span>
+          <span class="nav-role" data-i18n="nav-role">AI & Full-Stack Engineer</span>
         </div>
       </a>
 
       <div class="nav-links">
-        <a href="#projects" class="nav-link" data-i18n="nav-projects">الأنظمة</a>
-        <a href="#interactive-lab" class="nav-link" data-i18n="nav-lab">المختبر التفاعلي</a>
-        <a href="#experience" class="nav-link" data-i18n="nav-experience">المسيرة</a>
-        <a href="#credentials" class="nav-link" data-i18n="nav-credentials">الاعتمادات</a>
+        <a href="#experience" class="nav-link" data-i18n="nav-experience">Experience</a>
+        <a href="#projects" class="nav-link" data-i18n="nav-projects">Projects</a>
+        <a href="#credentials" class="nav-link" data-i18n="nav-credentials">Certifications</a>
       </div>
 
       <div class="nav-actions">
-        <!-- Audio Haptic Sound Toggle -->
-        <button id="sound-toggle" class="btn-ghost icon-only" title="تفعيل / كتم المؤثرات الصوتية اللمسية" aria-label="Audio Feedback">
-          <svg id="sound-icon-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
-          <svg id="sound-icon-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
-        </button>
-
         <!-- Segmented Language Switcher -->
         <div class="lang-segmented-control" role="group" aria-label="Language / اللغة">
-          <button id="lang-btn-ar" class="lang-segment active" data-lang="ar">عربي</button>
-          <button id="lang-btn-en" class="lang-segment" data-lang="en">EN</button>
+          <button id="lang-btn-ar" class="lang-segment" data-lang="ar">عربي</button>
+          <button id="lang-btn-en" class="lang-segment active" data-lang="en">EN</button>
         </div>
 
         <button id="copy-email-nav" class="btn-apple-primary btn-sm desktop-only" data-email="bariqa00@gmail.com">
-          <span data-i18n="nav-contact">تواصل معي</span>
+          <span data-i18n="nav-contact">Contact</span>
         </button>
 
         <button id="mobile-menu-trigger" class="btn-ghost icon-only mobile-only" aria-label="فتح القائمة">
@@ -73,30 +71,26 @@
       <div class="mobile-lang-row">
         <span class="mobile-lang-title">اللغة / Language</span>
         <div class="lang-segmented-control mobile">
-          <button class="lang-segment-mob active" data-lang="ar">العربية</button>
-          <button class="lang-segment-mob" data-lang="en">English</button>
+          <button class="lang-segment-mob" data-lang="ar">العربية</button>
+          <button class="lang-segment-mob active" data-lang="en">English</button>
         </div>
       </div>
       <div class="mobile-nav-divider"></div>
-      <a href="#projects" class="mobile-nav-link">
-        <span data-i18n="mob-projects">الأنظمة والمشاريع</span>
-        <span class="mobile-nav-meta">4 أنظمة</span>
-      </a>
-      <a href="#interactive-lab" class="mobile-nav-link">
-        <span data-i18n="mob-lab">المختبر التفاعلي</span>
-        <span class="mobile-nav-meta">Live Radar</span>
-      </a>
       <a href="#experience" class="mobile-nav-link">
-        <span data-i18n="mob-experience">المسيرة والتعليم</span>
-        <span class="mobile-nav-meta">مرتبة الشرف</span>
+        <span data-i18n="mob-experience">Experience & Education</span>
+        <span class="mobile-nav-meta" data-i18n="mob-meta-exp">Honors</span>
+      </a>
+      <a href="#projects" class="mobile-nav-link">
+        <span data-i18n="mob-projects">Projects</span>
+        <span class="mobile-nav-meta" data-i18n="mob-meta-proj">4 Projects</span>
       </a>
       <a href="#credentials" class="mobile-nav-link">
-        <span data-i18n="mob-credentials">الاعتمادات المهنية</span>
-        <span class="mobile-nav-meta">سدايا & AWS</span>
+        <span data-i18n="mob-credentials">Certifications</span>
+        <span class="mobile-nav-meta" data-i18n="mob-meta-cred">SDAIA & AWS</span>
       </a>
       <div class="mobile-nav-divider"></div>
       <button id="mobile-copy-email" class="btn-apple-primary" data-email="bariqa00@gmail.com" style="width: 100%;">
-        <span data-i18n="mob-copy">نسخ البريد الإلكتروني</span>
+        <span data-i18n="mob-copy">Copy Email</span>
       </button>
     </div>
   </header>
@@ -108,19 +102,16 @@
     <section id="hero" class="hero-section">
       <div class="hero-badge-wrap">
         <div class="apple-pill-badge">
-          <span class="pulse-dot"></span>
-          <span data-i18n="hero-badge">خريجة علوم حاسب بمرتبة الشرف · المملكة العربية السعودية</span>
+          <span data-i18n="hero-badge">Fresh Graduate · Honors Computer Science Graduate · Saudi Arabia</span>
         </div>
       </div>
 
       <h1 class="hero-title">
-        <span class="reveal-text" data-i18n="hero-title-1">هندسة أنظمة الذكاء الاصطناعي الذاتية،</span><br>
-        <span class="reveal-text text-shimmer" data-i18n="hero-title-2">والرؤية الحاسوبية اللحظية.</span>
+        <span class="reveal-text" data-i18n="hero-title-1">Building practical AI systems,</span><br>
+        <span class="reveal-text text-shimmer" data-i18n="hero-title-2">and computer vision applications.</span>
       </h1>
 
-      <p class="hero-subtitle" data-i18n="hero-sub">
-        أصمم وأبتكر معمارية الوكلاء متعددي المهام (Multi-Agent Orchestration)، وأبني خطوط المعالجة البصرية على الحافة بزمن استجابة فائق يبدأ من 12.5ms. برمجيات ذاتية، آمنة ومصممة لبيئات العمل الفعلية.
-      </p>
+      <p class="hero-subtitle" data-i18n="hero-sub">AI & Full-Stack Engineer specializing in multi-agent systems and computer vision. I focus on turning machine learning models into fast, reliable applications that work effectively in real-world environments.</p>
 
       <!-- Apple Keynote Spec Cards (Interactive Spring Tilt) -->
       <div class="metrics-grid">
@@ -129,8 +120,8 @@
           <div class="metric-top">
             <span class="metric-num">12.5</span><span class="metric-unit">ms</span>
           </div>
-          <div class="metric-label" data-i18n="spec1-title">زمن الاستجابة على الحافة</div>
-          <div class="metric-sub" data-i18n="spec1-sub">EfficientNet-B0 مهيأ سريرياً</div>
+          <div class="metric-label" data-i18n="spec1-title">Inference Latency</div>
+          <div class="metric-sub" data-i18n="spec1-sub">EfficientNet-B0 inference</div>
           <div class="metric-bar"><div class="metric-bar-fill" style="width: 96%;"></div></div>
         </div>
 
@@ -139,8 +130,8 @@
           <div class="metric-top">
             <span class="metric-num">37.5</span><span class="metric-unit">FPS</span>
           </div>
-          <div class="metric-label" data-i18n="spec2-title">معالجة الفيديو اللحظية</div>
-          <div class="metric-sub" data-i18n="spec2-sub">3 تدفقات متزامنة عبر YOLOv11</div>
+          <div class="metric-label" data-i18n="spec2-title">Live Video Processing</div>
+          <div class="metric-sub" data-i18n="spec2-sub">3 concurrent streams via YOLOv11</div>
           <div class="metric-bar"><div class="metric-bar-fill" style="width: 92%;"></div></div>
         </div>
 
@@ -149,8 +140,8 @@
           <div class="metric-top">
             <span class="metric-num">99.55</span><span class="metric-unit">%</span>
           </div>
-          <div class="metric-label" data-i18n="spec3-title">الدقة السريرية المتجاورة</div>
-          <div class="metric-sub" data-i18n="spec3-sub">تصنيف هرمي دقيق للأمراض</div>
+          <div class="metric-label" data-i18n="spec3-title">Medical Screening</div>
+          <div class="metric-sub" data-i18n="spec3-sub">Dermatology classification & grading</div>
           <div class="metric-bar"><div class="metric-bar-fill" style="width: 99.5%;"></div></div>
         </div>
 
@@ -159,20 +150,20 @@
           <div class="metric-top">
             <span class="metric-num">90</span><span class="metric-unit">%</span>
           </div>
-          <div class="metric-label" data-i18n="spec4-title">خفض استهلاك الرموز</div>
-          <div class="metric-sub" data-i18n="spec4-sub">تخزين مؤقت ونطاق جغرافي ذكي</div>
+          <div class="metric-label" data-i18n="spec4-title">Token Cost Reduction</div>
+          <div class="metric-sub" data-i18n="spec4-sub">Prompt caching & context scoping</div>
           <div class="metric-bar"><div class="metric-bar-fill" style="width: 90%;"></div></div>
         </div>
       </div>
 
       <div class="hero-cta-group">
-        <a href="#projects" class="btn-apple-primary btn-magnetic">
-          <span data-i18n="cta-explore">استعراض الأنظمة التقنية</span>
+        <a href="#experience" class="btn-apple-primary btn-magnetic">
+          <span data-i18n="cta-explore">Explore Experience & Projects</span>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
         </a>
         <button id="copy-email-hero" class="btn-apple-secondary btn-magnetic" data-email="bariqa00@gmail.com">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-          <span data-i18n="cta-copy">نسخ البريد الإلكتروني</span>
+          <span data-i18n="cta-copy">Copy Email</span>
         </button>
         <a href="https://github.com/Bariqa1" target="_blank" rel="noopener noreferrer" class="btn-ghost icon-only btn-magnetic" title="حساب GitHub">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -183,19 +174,71 @@
       </div>
     </section>
 
+    <!-- Experience Timeline -->
+    <section id="experience" class="section-container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title" data-i18n="exp-title">Experience & Education</h2>
+        </div>
+      </div>
+
+      <div class="timeline-container">
+        
+        <div class="timeline-card apple-card" data-tilt>
+          <div class="card-glass-specular"></div>
+          <div class="timeline-meta">
+            <span class="timeline-period" data-i18n="exp1-date">August 2026 – October 2026</span>
+            <span class="badge-role award" data-i18n="badge-champion">🏆 Champion of the Week</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-title" data-i18n="exp1-org">Saudi Digital Academy (SDA) / WeCloudData</h3>
+            <div class="timeline-subtitle" data-i18n="exp1-role">Agentic AI Bootcamp — 280 Hours</div>
+            <p class="timeline-text" data-i18n="exp1-desc">Intensive training focused on building multi-agent systems, RAG pipelines, and model evaluation using LangGraph and DeepEval. Awarded Champion of the Week for system architecture design.</p>
+          </div>
+        </div>
+
+        <div class="timeline-card apple-card" data-tilt>
+          <div class="card-glass-specular"></div>
+          <div class="timeline-meta">
+            <span class="timeline-period" data-i18n="exp2-date">June 2025 – August 2025</span>
+            <span class="badge-role" data-i18n="badge-intern">Internship</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-title" data-i18n="exp2-org">Smart Methods</h3>
+            <div class="timeline-subtitle" data-i18n="exp2-role">AI Engineering Intern (420 Hours)</div>
+            <p class="timeline-text" data-i18n="exp2-desc">Hands-on internship developing computer vision workflows with OpenCV and YOLO, and building a voice-enabled conversational assistant using Vosk and Cohere.</p>
+          </div>
+        </div>
+
+        <div class="timeline-card apple-card" data-tilt>
+          <div class="card-glass-specular"></div>
+          <div class="timeline-meta">
+            <span class="timeline-period" data-i18n="exp3-date">July 2021 – June 2026</span>
+            <span class="badge-role honors" data-i18n="badge-gpa">Excellent with Honors</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-title" data-i18n="exp3-org">Qassim University</h3>
+            <div class="timeline-subtitle" data-i18n="exp3-degree">Bachelor's Degree in Computer Science</div>
+            <p class="timeline-text" data-i18n="exp3-desc">Graduated with honors and an Excellent rating, focusing on algorithms, artificial intelligence, software engineering, and database systems.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Apple-Grade Interactive Systems Showcase -->
     <section id="projects" class="section-container">
       <div class="section-header">
         <div>
-          <h2 class="section-title" data-i18n="sec-systems">الأنظمة والمشاريع الرئيسية.</h2>
-          <p class="section-subtitle" data-i18n="sec-systems-sub">أربعة حلول برمجية نوعية، صُممت وبُنيت وفق أعلى معايير الجاهزية والاعتمادية.</p>
+          <h2 class="section-title" data-i18n="sec-systems">Projects</h2>
+          <p class="section-subtitle" data-i18n="sec-systems-sub">Practical systems I built with a focus on model accuracy, fast execution, and clean code.</p>
         </div>
 
-        <div class="filter-tab-bar" role="tablist" aria-label="تصنيف الأنظمة البرمجية">
-          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true" data-i18n="filter-all">كافة الأنظمة</button>
-          <button class="filter-tab" data-filter="agentic" role="tab" aria-selected="false" data-i18n="filter-agentic">الوكلاء الذاتية</button>
-          <button class="filter-tab" data-filter="vision" role="tab" aria-selected="false" data-i18n="filter-vision">الرؤية الحاسوبية</button>
-          <button class="filter-tab" data-filter="fullstack" role="tab" aria-selected="false" data-i18n="filter-fullstack">تطبيقات متكاملة</button>
+        <div class="filter-tab-bar" role="tablist" aria-label="تصنيف المشاريع">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true" data-i18n="filter-all">All Projects</button>
+          <button class="filter-tab" data-filter="agentic" role="tab" aria-selected="false" data-i18n="filter-agentic">Agent Systems</button>
+          <button class="filter-tab" data-filter="vision" role="tab" aria-selected="false" data-i18n="filter-vision">Computer Vision</button>
+          <button class="filter-tab" data-filter="fullstack" role="tab" aria-selected="false" data-i18n="filter-fullstack">Full Stack</button>
         </div>
       </div>
 
@@ -208,19 +251,19 @@
           <!-- Live Interactive Edge HUD Preview inside Card -->
           <div class="card-interactive-preview aura-hud-preview">
             <div class="hud-top-bar">
-              <span class="hud-tag"><span class="hud-dot"></span> LIVE 37.5 FPS</span>
-              <span class="hud-cam">CAM-03 // ZONE 4</span>
-              <span class="hud-status">RBAC ACTIVE</span>
+              <span class="hud-tag" data-i18n="aurax-hud-fps"><span class="hud-dot"></span> LIVE 37.5 FPS</span>
+              <span class="hud-cam" data-i18n="aurax-hud-cam">CAM-03 // ZONE 4</span>
+              <span class="hud-status" data-i18n="aurax-hud-rbac">RBAC ACTIVE</span>
             </div>
             <div class="hud-screen">
               <div class="hud-grid-bg"></div>
               <div class="hud-box box-1">
-                <span class="hud-label">PERSON [98.2%]</span>
-                <span class="hud-sub-label">HARD HAT: DETECTED</span>
+                <span class="hud-label" data-i18n="aurax-hud-person">PERSON [98.2%]</span>
+                <span class="hud-sub-label" data-i18n="aurax-hud-helmet">HARD HAT: DETECTED</span>
               </div>
               <div class="hud-box box-2 warning">
-                <span class="hud-label">ZONE BREACH [RESTRICTED]</span>
-                <span class="hud-sub-label">RBAC: LEVEL 3</span>
+                <span class="hud-label" data-i18n="aurax-hud-breach">ZONE BREACH [RESTRICTED]</span>
+                <span class="hud-sub-label" data-i18n="aurax-hud-level">RBAC: LEVEL 3</span>
               </div>
               <div class="hud-radar">
                 <div class="radar-sweep"></div>
@@ -231,34 +274,32 @@
           <div class="project-body">
             <div class="project-header">
               <div class="project-badges">
-                <span class="status-badge highlight" data-i18n="tag-mhrsd">وزارة الموارد البشرية 3337 & ISO 7243</span>
+                <span class="status-badge highlight" data-i18n="tag-mhrsd">Industrial Safety (MHRSD 3337)</span>
                 <span class="status-badge">LangGraph & YOLOv11</span>
               </div>
               <div class="project-links">
                 <a href="https://github.com/Bariqa1/AuraX" target="_blank" rel="noopener noreferrer" class="icon-link">
-                  <span>الكود</span>
+                  <span data-i18n="link-code">Code</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
               </div>
             </div>
 
-            <h3 class="project-name" data-i18n="aurax-title">AuraX — منصة السلامة الصناعية وإدارة المخاطر بالوكلاء الذاتية</h3>
-            <p class="project-desc" data-i18n="aurax-desc">
-              منصة صناعية متكاملة توظف 5 وكلاء ذكاء اصطناعي (الرؤية، الامتثال، البيئة، التنبؤ، المساعد) للرصد الاستباقي لمخاطر المصانع، وإدارة الدخول البصري الذكي (Visual RBAC) ومنع الحوادث لحظياً.
-            </p>
+            <h3 class="project-name" data-i18n="aurax-title">AuraX — Industrial Safety Monitoring System</h3>
+            <p class="project-desc" data-i18n="aurax-desc">An industrial safety monitoring platform that connects YOLOv11 vision models for hazard detection (such as missing hard hats or worker falls) with LangGraph agents to automate alerts and zone access in real time.</p>
 
             <div class="project-highlights">
               <div class="highlight-item">
                 <div class="highlight-num">37.5 FPS</div>
-                <div class="highlight-text" data-i18n="aurax-h1">معالجة 3 كاميرات متزامنة بزمن 26.7ms</div>
+                <div class="highlight-text" data-i18n="aurax-h1">3 concurrent camera streams at 26.7ms</div>
               </div>
               <div class="highlight-item">
                 <div class="highlight-num">100%</div>
-                <div class="highlight-text" data-i18n="aurax-h2">دقة رصد حوادث السقوط واكتشاف الخوذات</div>
+                <div class="highlight-text" data-i18n="aurax-h2">Accurate detection of falls & safety gear</div>
               </div>
               <div class="highlight-item">
                 <div class="highlight-num">83 / 83</div>
-                <div class="highlight-text" data-i18n="aurax-h3">اجتياز كامل لاختبارات Pytest الآلية</div>
+                <div class="highlight-text" data-i18n="aurax-h3">Automated test suite passing (Pytest)</div>
               </div>
             </div>
 
@@ -283,12 +324,12 @@
               <div class="derma-scan-line"></div>
               <div class="derma-overlay-box">
                 <div class="derma-target-circle"></div>
-                <span class="derma-badge-result">MELANOMA PRECISION: 95.5%</span>
+                <span class="derma-badge-result" data-i18n="derma-hud-melanoma">MELANOMA PRECISION: 95.5%</span>
               </div>
               <div class="derma-metrics-pill">
-                <span>STAGE 1: 9-CLASS CNN</span>
+                <span data-i18n="derma-hud-stage1">STAGE 1: 9-CLASS CNN</span>
                 <span>•</span>
-                <span>STAGE 2: ACNE GAGS ±1 (99.55%)</span>
+                <span data-i18n="derma-hud-stage2">STAGE 2: ACNE GAGS ±1 (99.55%)</span>
               </div>
             </div>
           </div>
@@ -296,34 +337,32 @@
           <div class="project-body">
             <div class="project-header">
               <div class="project-badges">
-                <span class="status-badge clinical" data-i18n="tag-clinical">معايير دقة سريرية</span>
-                <span class="status-badge" data-i18n="tag-9class">تشخيص 9 أمراض جلدية</span>
+                <span class="status-badge clinical" data-i18n="tag-clinical">Clinical Accuracy</span>
+                <span class="status-badge" data-i18n="tag-9class">9 Skin Conditions</span>
               </div>
               <div class="project-links">
                 <a href="https://github.com/Bariqa1/DermaSense" target="_blank" rel="noopener noreferrer" class="icon-link">
-                  <span>الكود</span>
+                  <span data-i18n="link-code">Code</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
               </div>
             </div>
 
-            <h3 class="project-name" data-i18n="derma-title">DermaSense — نظام فحص جلدي هرمي بالتعلم العميق</h3>
-            <p class="project-desc" data-i18n="derma-desc">
-              خط تشخيص طبي على مرحلتين يعتمد نموذج EfficientNet-B0 ودالة الخسارة الطبية MedicalFocalLoss لتشخيص تفريقي لـ 9 أمراض جلدية شائعة وخطيرة مع قياس دقيق لدرجات شدة حب الشباب (GAGS).
-            </p>
+            <h3 class="project-name" data-i18n="derma-title">DermaSense — Skin Condition Screening System</h3>
+            <p class="project-desc" data-i18n="derma-desc">A two-stage deep learning pipeline using EfficientNet-B0 and Focal Loss to screen 9 dermatological conditions and accurately grade acne severity with fast inference times.</p>
 
             <div class="project-highlights">
               <div class="highlight-item">
                 <div class="highlight-num">12.5 ms</div>
-                <div class="highlight-text" data-i18n="derma-h1">زمن الاستنتاج عبر TTA</div>
+                <div class="highlight-text" data-i18n="derma-h1">Fast inference latency (TTA)</div>
               </div>
               <div class="highlight-item">
                 <div class="highlight-num">95.5%</div>
-                <div class="highlight-text" data-i18n="derma-h2">دقة رصد الميلانوما (Melanoma Precision)</div>
+                <div class="highlight-text" data-i18n="derma-h2">Melanoma detection precision</div>
               </div>
               <div class="highlight-item">
                 <div class="highlight-num">99.55%</div>
-                <div class="highlight-text" data-i18n="derma-h3">دقة تقييم الشدة المتجاورة (±1 Grade)</div>
+                <div class="highlight-text" data-i18n="derma-h3">Acne severity grading accuracy (±1 Grade)</div>
               </div>
             </div>
 
@@ -337,23 +376,23 @@
           </div>
         </article>
 
-        <!-- System 3: Attocus (Autonomous Socratic Agent) -->
+        <!-- System 3: Attocus (Interactive AI Study Assistant) -->
         <article class="project-card apple-card interactive-system-card" data-category="agentic fullstack" data-tilt>
           <div class="card-glass-specular"></div>
 
-          <!-- Socratic Dialogue Preview -->
+          <!-- Dialogue Preview -->
           <div class="card-interactive-preview socratic-preview">
             <div class="chat-mockup">
               <div class="chat-bubble student">
-                <span>"كيف أبدأ في حل مسألة البرمجة الديناميكية هذه؟"</span>
+                <span data-i18n="attocus-dialogue-q">"How do I begin solving this dynamic programming problem?"</span>
               </div>
               <div class="chat-bubble agent">
-                <span class="agent-tag">SOCRATIC AGENT</span>
-                <span>"تأمل في الحالة الأساسية (Base Case) أولاً: ما هي أصغر مدخلة يمكننا حلها مباشرة دون تكرار؟"</span>
+                <span class="agent-tag" data-i18n="attocus-dialogue-role">AI TUTOR</span>
+                <span data-i18n="attocus-dialogue-a">"Consider the base case first: what is the simplest subproblem you can solve directly without recursion?"</span>
               </div>
               <div class="chat-status-row">
-                <span class="live-pill">● Gaze: In-Focus (100%)</span>
-                <span class="leak-pill">Zero Data Retention</span>
+                <span class="live-pill" data-i18n="attocus-hud-focus">● Gaze: In-Focus (100%)</span>
+                <span class="leak-pill" data-i18n="attocus-hud-privacy">Zero Data Retention</span>
               </div>
             </div>
           </div>
@@ -361,28 +400,32 @@
           <div class="project-body">
             <div class="project-header">
               <div class="project-badges">
-                <span class="status-badge" data-i18n="tag-socratic">المنهج السقراطي</span>
-                <span class="status-badge highlight" data-i18n="tag-privacy">خصوصية كاملة على الجهاز</span>
+                <span class="status-badge" data-i18n="tag-socratic">Interactive Guided Learning</span>
+                <span class="status-badge highlight" data-i18n="tag-privacy">Private On-Device Processing</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Bariqa1/Attocus" target="_blank" rel="noopener noreferrer" class="icon-link">
+                  <span data-i18n="link-code">Code</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
               </div>
             </div>
 
-            <h3 class="project-name" data-i18n="attocus-title">Attocus — مرافق دراسي ذاتي بوكلاء متعددي المهام</h3>
-            <p class="project-desc" data-i18n="attocus-desc">
-              بيئة تعليمية ذكية تنظم 4 وكلاء معرفيين يعتمدون الأسلوب السقراطي لتحفيز التفكير. مزود بخط رؤية حاسوبية محلي (YOLO11n + MediaPipe FaceMesh) لتتبع التركيز عبر WebSockets دون مغادرة أي بيانات لجهاز الطالب.
-            </p>
+            <h3 class="project-name" data-i18n="attocus-title">Attocus — Interactive AI Study Assistant</h3>
+            <p class="project-desc" data-i18n="attocus-desc">An educational assistant orchestrating 4 conversational agents that guide students through problem-solving step by step. Tracks focus locally in-browser without storing or transmitting photos to protect privacy.</p>
 
             <div class="project-highlights">
               <div class="highlight-item">
                 <div class="highlight-num">78 / 78</div>
-                <div class="highlight-text" data-i18n="attocus-h1">اختبار تقييم DeepEval مجتاز بنجاح</div>
+                <div class="highlight-text" data-i18n="attocus-h1">DeepEval evaluation benchmark passed</div>
               </div>
               <div class="highlight-item">
-                <div class="highlight-num">0ms Leak</div>
-                <div class="highlight-text" data-i18n="attocus-h2">معالجة الفيديو في الذاكرة بدون حفظ</div>
+                <div class="highlight-num" data-i18n="attocus-num2">0ms Leak</div>
+                <div class="highlight-text" data-i18n="attocus-h2">Local in-memory video processing</div>
               </div>
               <div class="highlight-item">
-                <div class="highlight-num">4 Agents</div>
-                <div class="highlight-text" data-i18n="attocus-h3">توجيه ودعم إدراكي ذاتي ذكي</div>
+                <div class="highlight-num" data-i18n="attocus-num3">4 Agents</div>
+                <div class="highlight-text" data-i18n="attocus-h3">Specialized agents for guidance & dialogue</div>
               </div>
             </div>
 
@@ -407,9 +450,9 @@
               <div class="mini-phone-island"></div>
               <div class="mini-phone-screen">
                 <div class="app-card-item">
-                  <span class="app-badge">AI RECOMMENDED (0.8477 NDCG)</span>
-                  <div class="app-title">معسكر الذكاء الاصطناعي السحابي</div>
-                  <div class="app-meta">حضور متوقع: 94% (LightGBM MAE 1.8)</div>
+                  <span class="app-badge" data-i18n="uniclubs-hud-badge">AI RECOMMENDED (0.8477 NDCG)</span>
+                  <div class="app-title" data-i18n="uniclubs-hud-title">Cloud AI Bootcamp</div>
+                  <div class="app-meta" data-i18n="uniclubs-hud-meta">Predicted Attendance: 94% (LightGBM MAE 1.8)</div>
                 </div>
                 <div class="app-sentiment-bar">
                   <span class="app-sentiment-fill"></span>
@@ -421,34 +464,32 @@
           <div class="project-body">
             <div class="project-header">
               <div class="project-badges">
-                <span class="status-badge" data-i18n="tag-recsys">توصية هجينة TFRS</span>
+                <span class="status-badge" data-i18n="tag-recsys">Hybrid RecSys (TFRS)</span>
                 <span class="status-badge highlight" data-i18n="tag-flutter">Flutter & Gemini</span>
               </div>
               <div class="project-links">
                 <a href="https://github.com/Bariqa1/Uniclubs" target="_blank" rel="noopener noreferrer" class="icon-link">
-                  <span>الكود</span>
+                  <span data-i18n="link-code">Code</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
               </div>
             </div>
 
-            <h3 class="project-name" data-i18n="uniclubs-title">UniClubs — تطبيق استكشاف الفعاليات والتنبؤ بالحضور</h3>
-            <p class="project-desc" data-i18n="uniclubs-desc">
-              تطبيق موبايل إنتاجي مبني بـ Flutter و Dart، مدعوم بمحرك ترشيح هجين (TensorFlow Recommenders) ونموذج LightGBM للتنبؤ بحجم الحضور، وتكامل ذكي مع Google Gemini لتصنيف المشاعر.
-            </p>
+            <h3 class="project-name" data-i18n="uniclubs-title">UniClubs — Student Event Discovery App</h3>
+            <p class="project-desc" data-i18n="uniclubs-desc">A Flutter and Dart mobile app helping students discover campus events. Features an interest-based recommendation system, an attendance forecasting model, and review sentiment analysis powered by Gemini.</p>
 
             <div class="project-highlights">
               <div class="highlight-item">
                 <div class="highlight-num">0.8477</div>
-                <div class="highlight-text" data-i18n="uniclubs-h1">مقياس ترتيب التوصيات NDCG@10</div>
+                <div class="highlight-text" data-i18n="uniclubs-h1">Ranking accuracy score (NDCG@10)</div>
               </div>
               <div class="highlight-item">
-                <div class="highlight-num">86% خفض</div>
-                <div class="highlight-text" data-i18n="uniclubs-h2">تقليل هامش خطأ التنبؤ بالحضور (MAE 1.8)</div>
+                <div class="highlight-num" data-i18n="uniclubs-num2">86% REDUCTION</div>
+                <div class="highlight-text" data-i18n="uniclubs-h2">Reduced attendance forecasting error (MAE 1.8)</div>
               </div>
               <div class="highlight-item">
                 <div class="highlight-num">1.00 F1</div>
-                <div class="highlight-text" data-i18n="uniclubs-h3">تصنيف مشاعر دقيق عبر نموذج Gemini</div>
+                <div class="highlight-text" data-i18n="uniclubs-h3">Sentiment analysis score via Gemini</div>
               </div>
             </div>
 
@@ -466,215 +507,170 @@
       </div>
     </section>
 
-    <!-- Interactive Multi-Agent Lab (Apple Hardware/Software Orchestration) -->
-    <section id="interactive-lab" class="section-container">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title" data-i18n="orch-title">معمارية وهندسة الوكلاء الذاتية.</h2>
-          <p class="section-subtitle" data-i18n="orch-sub">تجربة محاكاة تفاعلية فورية لمحرك تنسيق الوكلاء (AuraX StateGraph) المبني على LangGraph.</p>
-        </div>
-      </div>
-
-      <div class="orchestrator-console apple-card" data-tilt>
-        <div class="card-glass-specular"></div>
-        <div class="console-top-bar">
-          <div class="console-dots">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-          </div>
-          <div class="console-title">
-            <span>AuraX StateGraph Orchestrator (Python 3.12 Runtime)</span>
-          </div>
-          <div class="console-status">
-            <span class="live-blink"></span>
-            <span data-i18n="sim-active">نشط وجاهز</span>
-          </div>
-        </div>
-
-        <div class="console-body">
-          <div class="sim-controls">
-            <span class="sim-label" data-i18n="sim-prompt">اختر سيناريو بيئي لاختبار استجابة الوكلاء التلقائية:</span>
-            <div class="sim-btn-group">
-              <button class="sim-trigger active btn-magnetic" data-event="heat-stress">
-                <span data-i18n="ev-heat">🔥 إجهاد حراري شديد (معيار ISO 7243)</span>
-              </button>
-              <button class="sim-trigger btn-magnetic" data-event="hazard-ppe">
-                <span data-i18n="ev-ppe">⚠️ غياب خوذة السلامة (التحكم البصري RBAC)</span>
-              </button>
-              <button class="sim-trigger btn-magnetic" data-event="fall-event">
-                <span data-i18n="ev-fall">🚨 رصد حالة سقوط حرجة (YOLOv11)</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="agents-pipeline" id="agents-pipeline">
-            <div class="agent-node" id="agent-vision">
-              <div class="node-icon">👁️</div>
-              <div class="node-meta">
-                <span class="node-name" data-i18n="ag-vision">وكيل الرؤية</span>
-                <span class="node-status">Standby</span>
-              </div>
-              <div class="node-metric">37.5 FPS</div>
-            </div>
-
-            <div class="pipeline-connector">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </div>
-
-            <div class="agent-node" id="agent-compliance">
-              <div class="node-icon">⚖️</div>
-              <div class="node-meta">
-                <span class="node-name" data-i18n="ag-compliance">وكيل الامتثال</span>
-                <span class="node-status">Standby</span>
-              </div>
-              <div class="node-metric" data-i18n="metric-mhrsd">قرار 3337</div>
-            </div>
-
-            <div class="pipeline-connector">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </div>
-
-            <div class="agent-node" id="agent-environment">
-              <div class="node-icon">🌡️</div>
-              <div class="node-meta">
-                <span class="node-name" data-i18n="ag-env">وكيل البيئة</span>
-                <span class="node-status">Standby</span>
-              </div>
-              <div class="node-metric">WBGT Index</div>
-            </div>
-
-            <div class="pipeline-connector">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </div>
-
-            <div class="agent-node" id="agent-orchestrator">
-              <div class="node-icon">⚡</div>
-              <div class="node-meta">
-                <span class="node-name" data-i18n="ag-mitigation">وكيل الاستجابة</span>
-                <span class="node-status">Standby</span>
-              </div>
-              <div class="node-metric" data-i18n="metric-dispatch">تدخل فوري</div>
-            </div>
-          </div>
-
-          <div class="sim-terminal">
-            <div class="terminal-header">
-              <span class="terminal-tag">STATE GRAPH LOGS</span>
-              <span id="terminal-latency" class="terminal-time">22.4ms</span>
-            </div>
-            <pre class="terminal-code" id="terminal-code"><code>[SYSTEM READY] Listening on telemetry event stream...
-اضغط على أي سيناريو أعلاه لتنفيذ دورة التنسيق بين الوكلاء في الوقت الفعلي.</code></pre>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Timeline -->
-    <section id="experience" class="section-container">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title" data-i18n="exp-title">المسيرة المهنية والتعليم.</h2>
-        </div>
-      </div>
-
-      <div class="timeline-container">
-        
-        <div class="timeline-card apple-card" data-tilt>
-          <div class="card-glass-specular"></div>
-          <div class="timeline-meta">
-            <span class="timeline-period">أغسطس 2026 – أكتوبر 2026</span>
-            <span class="badge-role award" data-i18n="badge-champion">🏆 بطل الأسبوع (Champion of the Week)</span>
-          </div>
-          <div class="timeline-body">
-            <h3 class="timeline-title" data-i18n="exp1-org">الأكاديمية السعودية الرقمية (SDA) بالتعاون مع WeCloudData</h3>
-            <div class="timeline-subtitle" data-i18n="exp1-role">معسكر الذكاء الاصطناعي الذاتي (Agentic AI Bootcamp) — 280 ساعة مكثفة</div>
-            <p class="timeline-text" data-i18n="exp1-desc">
-              تطوير أنظمة الوكلاء المتعددين التوليدية، وبناء خطط المهام الإدراكية، وأطر تقييم RAG الإنتاجية باستخدام DeepEval و LangGraph. التتويج بلقب بطل الأسبوع لجودة المعمارية البرمجية المنفذة.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-card apple-card" data-tilt>
-          <div class="card-glass-specular"></div>
-          <div class="timeline-meta">
-            <span class="timeline-period">يونيو 2025 – أغسطس 2025</span>
-            <span class="badge-role" data-i18n="badge-intern">تدريب مهني</span>
-          </div>
-          <div class="timeline-body">
-            <h3 class="timeline-title" data-i18n="exp2-org">الأساليب الذكية (Smart Methods)</h3>
-            <div class="timeline-subtitle" data-i18n="exp2-role">متدربة في هندسة الذكاء الاصطناعي والأنظمة المتكاملة (420 ساعة)</div>
-            <p class="timeline-text" data-i18n="exp2-desc">
-              هندسة خطوط معالجة الرؤية الحاسوبية على الحافة باستخدام YOLO و OpenCV، وتطوير شات بوت ذكاء اصطناعي تفاعلي بالصوت يعتمد تقنيات Vosk ونموذج Cohere اللغوي.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-card apple-card" data-tilt>
-          <div class="card-glass-specular"></div>
-          <div class="timeline-meta">
-            <span class="timeline-period">يوليو 2021 – يونيو 2026</span>
-            <span class="badge-role honors" data-i18n="badge-gpa">معدل 4.62 / 5.00 · ممتاز</span>
-          </div>
-          <div class="timeline-body">
-            <h3 class="timeline-title" data-i18n="exp3-org">جامعة القصيم</h3>
-            <div class="timeline-subtitle" data-i18n="exp3-degree">بكالوريوس علوم الحاسب (مرتبة الشرف الثانية)</div>
-            <p class="timeline-text" data-i18n="exp3-desc">
-              تأسيس أكاديمي عميق في الخوارزميات، والأنظمة الموزعة، والتعلم العميق، وهندسة قواعد البيانات والشبكات.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
     <!-- Verified Credentials -->
     <section id="credentials" class="section-container">
       <div class="section-header">
         <div>
-          <h2 class="section-title" data-i18n="cred-title">الاعتمادات والشهادات المهنية.</h2>
-          <p class="section-subtitle" data-i18n="cred-sub">شهادات معتمدة صادرة من أعلى الهيئات والمؤسسات التقنية الوطنية والعالمية.</p>
+          <h2 class="section-title" data-i18n="cred-title">Certifications</h2>
+          <p class="section-subtitle" data-i18n="cred-sub">Professional certifications and advanced courses in AI, software development, and cloud computing.</p>
         </div>
       </div>
 
       <div class="certs-grid">
         <div class="cert-card apple-card" data-tilt>
           <div class="card-glass-specular"></div>
-          <div class="cert-icon-box">🏛️</div>
+          <div class="cert-card-header">
+            <div class="cert-icon-box">🤖</div>
+            <span class="cert-verify-btn" style="cursor: default; pointer-events: none; border-color: rgba(0,113,227,0.2); background: rgba(0,113,227,0.06); color: var(--apple-blue);" data-i18n="cert1-badge">🏆 Champion of the Week</span>
+          </div>
           <div class="cert-info">
-            <div class="cert-issuer" data-i18n="cert1-issuer">الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا)</div>
-            <h4 class="cert-name" data-i18n="cert1-name">ممارس معتمد في تعلم الآلة (ML Practitioner)</h4>
-            <div class="cert-date">ديسمبر 2023 · المعيار الوطني للذكاء الاصطناعي</div>
+            <div class="cert-issuer" data-i18n="cert1-issuer">Saudi Digital Academy (SDA) / WeCloudData</div>
+            <h4 class="cert-name" data-i18n="cert1-name">Agentic AI Bootcamp — 280 Hours</h4>
+            <div class="cert-date" data-i18n="cert1-date">October 2026</div>
           </div>
         </div>
 
         <div class="cert-card apple-card" data-tilt>
           <div class="card-glass-specular"></div>
-          <div class="cert-icon-box">☁️</div>
+          <div class="cert-card-header">
+            <div class="cert-icon-box">🏛️</div>
+            <a href="https://sdaia.thinkific.com/certificates/fw9czwrcdg" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
+              <span data-i18n="cert-verify">Verify</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
           <div class="cert-info">
-            <div class="cert-issuer" data-i18n="cert2-issuer">أمازون ويب سيرفيسز (AWS) / الأكاديمية الرقمية</div>
-            <h4 class="cert-name">AWS Certified Cloud Practitioner</h4>
-            <div class="cert-date">فبراير 2024 · اعتماد حوسبة سحابية عالمي</div>
+            <div class="cert-issuer" data-i18n="cert2-issuer">Saudi Data & AI Authority (SDAIA)</div>
+            <h4 class="cert-name" data-i18n="cert2-name">Certified Machine Learning Practitioner</h4>
+            <div class="cert-date" data-i18n="cert2-date">December 2023</div>
           </div>
         </div>
 
         <div class="cert-card apple-card" data-tilt>
           <div class="card-glass-specular"></div>
-          <div class="cert-icon-box">🔬</div>
+          <div class="cert-card-header">
+            <div class="cert-icon-box">✨</div>
+            <a href="https://ce.nelc.gov.sa/storage/pdf/qu48/FX26DZQYJ38RQR-ar-1771156453.pdf" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
+              <span data-i18n="cert-verify">Verify</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
           <div class="cert-info">
-            <div class="cert-issuer" data-i18n="cert3-issuer">جامعة الملك عبدالله للعلوم والتقنية (KAUST) / GDG</div>
-            <h4 class="cert-name">معسكر الرؤية الحاسوبية المتقدمة</h4>
-            <div class="cert-date">نوفمبر 2025 · الرؤية الحاسوبية والشبكات العصبية</div>
+            <div class="cert-issuer" data-i18n="cert3-issuer">Qassim University</div>
+            <h4 class="cert-name" data-i18n="cert3-name">Generative AI</h4>
+            <div class="cert-date" data-i18n="cert3-date">February 2026</div>
           </div>
         </div>
 
         <div class="cert-card apple-card" data-tilt>
           <div class="card-glass-specular"></div>
-          <div class="cert-icon-box">🚀</div>
+          <div class="cert-card-header">
+            <div class="cert-icon-box">🚀</div>
+            <a href="https://drive.google.com/file/d/19SIcolQVSsKvwBSj8uXlEt25gTlY2aUI/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
+              <span data-i18n="cert-verify">Verify</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
           <div class="cert-info">
-            <div class="cert-issuer" data-i18n="cert4-issuer">أكاديمية طويق</div>
-            <h4 class="cert-name">تطوير البرمجيات المتكاملة (Django & Full Stack)</h4>
-            <div class="cert-date">مارس 2026 · بنية الأنظمة الإنتاجية المتكاملة</div>
+            <div class="cert-issuer" data-i18n="cert4-issuer">Tuwaiq Academy</div>
+            <h4 class="cert-name" data-i18n="cert4-name">Full-Stack Web Development using Django</h4>
+            <div class="cert-date" data-i18n="cert4-date">March 2026</div>
+          </div>
+        </div>
+
+        <div class="cert-card apple-card" data-tilt>
+          <div class="card-glass-specular"></div>
+          <div class="cert-card-header">
+            <div class="cert-icon-box">📊</div>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/LAALQTXN6FJ3" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
+              <span data-i18n="cert-verify">Verify</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+          <div class="cert-info">
+            <div class="cert-issuer" data-i18n="cert5-issuer">Google</div>
+            <h4 class="cert-name" data-i18n="cert5-name">Google Data Analytics Professional Certificate</h4>
+            <div class="cert-date" data-i18n="cert5-date">March 2024</div>
+          </div>
+        </div>
+
+        <div class="cert-card apple-card" data-tilt>
+          <div class="card-glass-specular"></div>
+          <div class="cert-card-header">
+            <div class="cert-icon-box">☁️</div>
+            <a href="https://www.credly.com/badges/4f20c3dc-f0f1-4a2c-b755-055ee861fd5c/linked_in_profile" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
+              <span data-i18n="cert-verify">Verify</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+          <div class="cert-info">
+            <div class="cert-issuer" data-i18n="cert6-issuer">Amazon Web Services (AWS)</div>
+            <h4 class="cert-name" data-i18n="cert6-name">AWS Academy Graduate — Machine Learning Foundations</h4>
+            <div class="cert-date" data-i18n="cert6-date">August 2026</div>
+          </div>
+        </div>
+
+        <div class="cert-card apple-card" data-tilt>
+          <div class="card-glass-specular"></div>
+          <div class="cert-card-header">
+            <div class="cert-icon-box">🧠</div>
+            <a href="https://drive.google.com/file/d/1h4kZo5NRSoQuWXeuFyY2C5HMMqrRh2ij/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
+              <span data-i18n="cert-verify">Verify</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+          <div class="cert-info">
+            <div class="cert-issuer" data-i18n="cert7-issuer">Qassim University</div>
+            <h4 class="cert-name" data-i18n="cert7-name">Innovation Summer Program — AI Agents Track</h4>
+            <div class="cert-date" data-i18n="cert7-date">July 2026</div>
+          </div>
+        </div>
+
+        <div class="cert-card apple-card" data-tilt>
+          <div class="card-glass-specular"></div>
+          <div class="cert-card-header">
+            <div class="cert-icon-box">🔬</div>
+            <a href="https://drive.google.com/file/d/1quvx7K40yw_ZmWivUOvO1on2mQfnB0xB/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
+              <span data-i18n="cert-verify">Verify</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+          <div class="cert-info">
+            <div class="cert-issuer" data-i18n="cert8-issuer">King Abdullah University of Science & Technology (KAUST) / GDG</div>
+            <h4 class="cert-name" data-i18n="cert8-name">Computer Vision Bootcamp by KAUST</h4>
+            <div class="cert-date" data-i18n="cert8-date">November 2025</div>
+          </div>
+        </div>
+
+        <div class="cert-card apple-card" data-tilt>
+          <div class="card-glass-specular"></div>
+          <div class="cert-card-header">
+            <div class="cert-icon-box">🛡️</div>
+            <a href="https://drive.google.com/file/d/1QzswOMnB-RRIp3u6LbouxvCICIQ7CymK/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
+              <span data-i18n="cert-verify">Verify</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+          <div class="cert-info">
+            <div class="cert-issuer" data-i18n="cert9-issuer">Tuwaiq Academy</div>
+            <h4 class="cert-name" data-i18n="cert9-name">eWPT — Certified Web Application Penetration Tester</h4>
+            <div class="cert-date" data-i18n="cert9-date">May 2024</div>
+          </div>
+        </div>
+
+        <div class="cert-card apple-card" data-tilt>
+          <div class="card-glass-specular"></div>
+          <div class="cert-card-header">
+            <div class="cert-icon-box">⚡</div>
+            <a href="https://ce.nelc.gov.sa/storage/pdf/sda79/FX243N5JPRPN5D-ar-1707351589.pdf" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
+              <span data-i18n="cert-verify">Verify</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+          <div class="cert-info">
+            <div class="cert-issuer" data-i18n="cert10-issuer">Amazon Web Services (AWS) / SDA</div>
+            <h4 class="cert-name" data-i18n="cert10-name">AWS Certified Cloud Practitioner</h4>
+            <div class="cert-date" data-i18n="cert10-date">February 2024</div>
           </div>
         </div>
       </div>
@@ -684,23 +680,17 @@
     <section class="section-container contact-section">
       <div class="contact-card apple-card" data-tilt>
         <div class="card-glass-specular"></div>
-        <div class="contact-header">
-          <span class="status-indicator"></span>
-          <span class="contact-status-text" data-i18n="contact-status">متاحة للانضمام للفرص النوعية وهندسة الذكاء الاصطناعي</span>
-        </div>
 
-        <h2 class="contact-heading" data-i18n="contact-h2">لنبتكر معاً معايير استثنائية.</h2>
-        <p class="contact-sub" data-i18n="contact-desc">
-          تسخير معمارية الوكلاء الذاتية ونماذج الرؤية الحاسوبية الفائقة لصناعة برمجيات ذكية تترك أثراً واقعياً. مرحباً بالتواصل لمناقشة الفرص الاستراتيجية والمشاريع النوعية.
-        </p>
+        <h2 class="contact-heading" data-i18n="contact-h2">Let's connect</h2>
+        <p class="contact-sub" data-i18n="contact-desc">Whether you have an open role, an AI project in mind, or just want to discuss tech, feel free to reach out via email or LinkedIn.</p>
 
         <div class="contact-actions">
           <button id="copy-email-footer" class="btn-apple-primary btn-magnetic" data-email="bariqa00@gmail.com">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            <span data-i18n="cta-copy-email">نسخ البريد الإلكتروني</span>
+            <span data-i18n="cta-copy-email">Copy Email</span>
           </button>
           <a href="mailto:bariqa00@gmail.com" class="btn-apple-secondary btn-magnetic">
-            <span data-i18n="cta-open-mail">إرسال رسالة مباشرة</span>
+            <span data-i18n="cta-open-mail">Send an Email</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
         </div>
@@ -715,14 +705,17 @@
             <span>GitHub</span>
           </a>
           <span class="social-pill location">
-            <span data-i18n="location-text">📍 المملكة العربية السعودية</span>
+            <span data-i18n="location-text">📍 Saudi Arabia</span>
           </span>
         </div>
       </div>
 
       <footer class="footer-bottom">
-        <p data-i18n="footer-cr">© 2026 بارقة الجارالله · جميع الحقوق محفوظة</p>
-        <p class="footer-note" data-i18n="footer-note">المملكة العربية السعودية</p>
+        <div class="footer-brand">
+          <img src="./assets/logo.png" alt="Bariqa" class="footer-logo">
+          <p data-i18n="footer-cr">© 2026 Bariqa Aljarallah</p>
+        </div>
+        <p class="footer-note" data-i18n="footer-note">Fresh Graduate · Honors Computer Science Graduate · Saudi Arabia</p>
       </footer>
     </section>
 
